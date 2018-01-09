@@ -1,0 +1,58 @@
+/* Gobal */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+h3 {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+  font-size: 3em;
+}
+
+div .circle{
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  margin: 0.2rem;
+  /*background: linear-gradient(90deg, ##1a2421, #013220, #483c32);*/
+  border: 2px solid #483d8b;
+  border-radius: 100%;
+}
+
+.icon-two {
+    font-size: 2.5em;
+    margin-left: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.profile {
+  height: 18em;
+  width: 18em;
+}
+
+.updates {
+  text-align: center;
+}
+
+.pencil {
+  font-size: 2em;
+  text-align: center;
+}
+
+#updates {
+display: inline;
+}
+
+.thumbs{
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid seagreen;
+  border-radius: 100%;
+}

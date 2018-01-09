@@ -1,32 +1,11 @@
-<<<<<<< HEAD
-=======
 /* Gobal */
-
->>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
-<<<<<<< HEAD
-  background-image: url(../assets/images/group.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  position: fixed;
-  color:white;
-}
-
-/*Dar un color transparente gris encima del background*/
-.background {
-  background: rgba(14, 10, 10, 0.8);
-}
-
-div .container {
-  background: linear-gradient(90deg, #89cff0, #f0ffff, #5d8aa8);
-}
-=======
+body {
   background-image: url(../assets/images/group.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -36,20 +15,15 @@ div .container {
 }
 
 /* Styles for container */
->>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
-
 h1 {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   color:white;
 }
 
-<<<<<<< HEAD
-=======
 .help-block {
   color:white;
 }
->>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
 
 #submit {
   font-family: 'Press Start 2P', cursive;
@@ -62,8 +36,6 @@ h1 {
   color: #fff;
   padding: 1rem 2rem;
 }
-<<<<<<< HEAD
-=======
 
 .transparent {
   background: transparent;
@@ -75,4 +47,3 @@ h1 {
 .transparent::placeholder { 
   color: #fff; 
 }
->>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
