@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+/* Gobal */
+
+>>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
 *{
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +10,7 @@
 }
 
 body{
+<<<<<<< HEAD
   background-image: url(../assets/images/group.jpg);
   background-position: center top;
   background-repeat: no-repeat;
@@ -20,6 +26,17 @@ body{
 div .container {
   background: linear-gradient(90deg, #89cff0, #f0ffff, #5d8aa8);
 }
+=======
+  background-image: url(../assets/images/group.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  color:white;
+}
+
+/* Styles for container */
+>>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
 
 h1 {
   font-family: 'Press Start 2P', cursive;
@@ -27,6 +44,12 @@ h1 {
   color:white;
 }
 
+<<<<<<< HEAD
+=======
+.help-block {
+  color:white;
+}
+>>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897
 
 #submit {
   font-family: 'Press Start 2P', cursive;
@@ -39,3 +62,17 @@ h1 {
   color: #fff;
   padding: 1rem 2rem;
 }
+<<<<<<< HEAD
+=======
+
+.transparent {
+  background: transparent;
+  color: #fff;
+}
+  
+/* Style for placeholder */
+  
+.transparent::placeholder { 
+  color: #fff; 
+}
+>>>>>>> 0e2225ed92541b52884c308ce2e1596b0d8ca897

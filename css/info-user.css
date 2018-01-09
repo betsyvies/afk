@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #C2BAAA;
+  color: #fff;
 }
    
 body {
-  background-image: url("../assets/images/fondo.jpg");
+  background-image: url("../assets/images/fondo.png");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-position: center center;
@@ -19,10 +19,6 @@ body {
 
 header {
   text-align: center;
-}
-
-.badground {
-  background: rgba(14, 10, 10, 0.8);
 }
 
 .container-button {
@@ -47,17 +43,23 @@ hr {
   margin-bottom: 2rem;
 }
 
-input {
-background-color: transparent;
+.transparent {
+background: transparent;
+color: #fff;
 }
 
-#input-float {
-  float: left;
-  margin-bottom: 2rem;
+/* Style for placeholder */
+
+.transparent::placeholder { 
+  color: #fff; 
 }
 
-#input-left {
-  float: left;
+.text-color {
+  color: #fff;
+}
+
+.color {
+  color: #3f3f3f;
 }
 
 .container-checkbox {
@@ -66,11 +68,13 @@ background-color: transparent;
 }
 
 .container-button-next {
+  font-family: 'Press Start 2P', cursive;
   margin-top: 4rem;
 }
 
 .button-next {
   background: transparent;
   color: #fff;
-  margin-bottom: 2rem;
 }
+
+
