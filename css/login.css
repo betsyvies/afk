@@ -1,12 +1,11 @@
 /* Gobal */
-
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   background-image: url(../assets/images/group.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -16,7 +15,6 @@ body{
 }
 
 /* Styles for container */
-
 h1 {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
