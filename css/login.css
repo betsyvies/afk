@@ -12,10 +12,10 @@ body{
   color:white;
 }
 
-/*Dar un color transparente gris encima del background*/
+/*Dar un color transparente gris encima del background
 .background {
   background: rgba(14, 10, 10, 0.8);
-}
+}*/
 
 div .container {
   background: linear-gradient(90deg, #89cff0, #f0ffff, #5d8aa8);
