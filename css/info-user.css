@@ -47,8 +47,8 @@ hr {
   margin-bottom: 2rem;
 }
 
-input {
-background-color: transparent;
+.transparent {
+background: transparent;
 }
 
 #input-float {
@@ -66,11 +66,12 @@ background-color: transparent;
 }
 
 .container-button-next {
+  font-family: 'Press Start 2P', cursive;
   margin-top: 4rem;
 }
 
 .button-next {
   background: transparent;
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 17.8rem;
 }
