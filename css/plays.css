@@ -121,3 +121,42 @@ display: inline;
   border-radius: 100%;
   font-size: 2em;
 }
+/* Styles for modal */
+
+.background-modal {
+  width: 90%;
+  top: 1rem;
+}
+
+.background-modal span {
+  color: #000;
+}
+
+.background-modal h1 {
+  color: #000;
+}
+
+[alt="map-modal"] {
+  width: 100%;
+  height: 15rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-modal-body {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.container-text p{
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.color-button {
+  background-color: #F0AD4E;
+  margin-bottom: 1rem;
+}

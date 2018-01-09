@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(90deg,#0f0f0f, #5d8aa8, #0f0f0f);
+}
+
+/*header style*/
+header {
+  position: fixed;
+}
+
+.circle {
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem;
+    border: 2px solid red;
+    border-radius: 100%;
+}
+
+.icon-header{
+    font-size: 2em;
+}
