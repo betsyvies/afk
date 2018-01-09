@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(../assets/images/group.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: fixed;
+  color:white;
+}
+
+/*Dar un color transparente gris encima del background*/
+.background {
+  background: rgba(14, 10, 10, 0.8);
+}
+
+div .container {
+  background: linear-gradient(90deg, #89cff0, #f0ffff, #5d8aa8);
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color:white;
+}
+
+
+#submit {
+  font-family: 'Press Start 2P', cursive;
+}
+
+#submit {
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  color: #fff;
+  padding: 1rem 2rem;
+}
