@@ -5,36 +5,88 @@ margin: 0;
 padding: 0;
 }
 
-h3 {
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
+body {
+    padding-top:270px;
 }
 
-span {
-  display: inline-block;
-  font-size: 3em;
-}
+ /* Styles for header */
 
-div .circle{
-  display: inline-block;
-  height: 4rem;
-  width: 4rem;
-  margin: 0.2rem;
-  /*background: linear-gradient(90deg, ##1a2421, #013220, #483c32);*/
-  border: 2px solid #483d8b;
-  border-radius: 100%;
-}
-
-.icon-two {
-    font-size: 2.5em;
-    margin-left: 1em;
+ .container-header {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    background-color: #0b0e11;
+  }
+  
+  .container-header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h4 {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    color: white;
+  }
+  
+  .plus {
+    display: inline-block;
+    color: #fff;
+    font-size: 3em;
+  }
+  
+  div .circle{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 0.2rem;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
+  }
+  
+  .container-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-two {
+    font-size: 2em;
     text-decoration: none;
-    color: black;
-}
+    color: white;
+  }
+  
+  hr {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /*Estilos Imagen - videos*/
 
 .profile {
   height: 18em;
   width: 18em;
+}
+
+h3 {
+    text-align: center;
 }
 
 .updates {
@@ -50,9 +102,22 @@ div .circle{
 display: inline;
 }
 
+/* video/image button style */
+.buttons{
+  background: linear-gradient(145deg, #0f0f0f , #1a2421, #1c352d);
+  color: white;
+}
+
+
+.thumbs-container {
+  padding-bottom: 25px;
+}
+
+/* "Like" button/option*/
 .thumbs{
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid seagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
+  font-size: 2em;
 }
