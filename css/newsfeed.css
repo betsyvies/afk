@@ -10,7 +10,7 @@
 body { 
   padding-top: 270px; 
 }
-
+       
 /* Styles for header */
 
 .container-header {
@@ -56,7 +56,7 @@ div .circle{
   display: inline-block;
   height: 4rem;
   width: 4rem;
-  margin-right: 0.2rem;
+  /* margin-right: 0.2rem; */
   background: #fff;
   border: 2px solid #fff;
   border-radius: 100%;
@@ -78,28 +78,27 @@ hr {
   margin-bottom: 0;
 }
 
-/* Styles for Container imagenes */
+/* Styles for Container notifications */
   
 .container-input {
-  width: 100%;
-  display: inline-flex;
+margin-bottom: 2rem;
 }
 
-.container-button-next {
-  border: none;
-  margin-top: 2rem;
-}
-  
-.button-cloud-upload {
-  border: none;
-  background-color: #173430;
+.icon-game {
+  color: rgb(21, 68, 22);
 }
 
-.title-img {
+.container-user {
+  margin-bottom: 1rem;
+}
+
+.user-icon {
+  color: rgb(21, 68, 22);
+  font-size: 6rem;
+}
+
+.text {
   color: #000;
+  text-align: justify;
 }
   
-[alt="jugada"] {
-  width: 100%;
-  height: 20rem; 
-}

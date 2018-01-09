@@ -6,15 +6,76 @@
   box-sizing: border-box;
   color: #fff;
 }
-     
-/* Styles for header */
-  
-header {
-  text-align: center;
+
+body { 
+  padding-top: 270px; 
 }
-  
+     
+/* Styles for navegation */
+
+.container-header {
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  background-color: #0b0e11;
+}
+
+.container-header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+.plus {
+  display: inline-block;
+  color: #fff;
+  font-size: 3em;
+}
+
+div .circle{
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 0.2rem;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+
+.container-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-two {
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
 hr {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Styles for Container videos */
@@ -25,12 +86,13 @@ hr {
 }
 
 .container-button-next {
-  background-color: #6bba55; 
+  border: none;
+  margin-top: 2rem;
 }
-
+  
 .button-cloud-upload {
   border: none;
-  background-color: #6bba55;
+  background-color: #173430;
 }
 
 .title-video {
