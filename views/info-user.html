@@ -42,18 +42,27 @@
         <div class="col-xs-12">
           <form>
             <div class="form-group container-input">
-              <input id="name" type="text" class="form-control transparent" name="name" placeholder="User Name">
+              <label for="inputEmail">User Name</label>
+              <input id="name" type="text" class="form-control transparent" name="name" placeholder="Ejm: José">
             </div>
             <div class="form-group container-input">
-              <input id="email" type="text" class="form-control transparent" name="email" placeholder="Email">
+              <label for="inputEmail">Email address</label>
+              <input id="email" type="text" class="form-control transparent" name="email" placeholder="Ejm: pepe@email.com">
             </div>
             <div class="form-group container-input">
-              <input id="password" type="text" class="form-control transparent" name="password" placeholder="Password">
+              <label for="inputEmail">Password</label>
+              <input id="inputPassword" type="password" class="form-control transparent" placeholder="Ejm: w3Un<po>0">
+            </div>
+            <div class="form-group container-input">
+              <label for="inputEmail">Type Password Again</label>
+              <input id="inputPasswordAgain" type="password" class="form-control transparent" placeholder="Ejm: w3Un<po>0">
             </div>
             <div class="form-group">
-              <select class="form-control transparent text-color" id="sel1">
-                <option class="color">Woman</option>
-                <option class="color">Man</option>
+              <label for="inputEmail">Gender</label>
+              <select id="sel1" class="form-control transparent text-color">
+                <option value="1" class="color">Select your gender...</option>
+                <option value="2" class="color">Woman</option>
+                <option value="3" class="color">Man</option>
               </select>
             </div>
           </form>

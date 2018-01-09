@@ -1,0 +1,40 @@
+/* Gobal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  padding-top: 100px; 
+}
+       
+/* Styles for header */
+
+.container-input {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Styles for Container notifications */
+  
+.container-user {
+  margin-bottom: 1rem;
+}
+
+.user-icon {
+  color: rgb(21, 68, 22);
+  font-size: 6rem;
+}
+
+.text {
+  color: #000;
+  text-align: justify;
+}
+  
