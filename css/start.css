@@ -1,0 +1,36 @@
+/* Gobal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  text-align: center;
+}
+
+/* Styles for main view */
+
+.background {
+  background-image: url("../assets/images/1.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+.container-button {
+  top: 18rem;
+}
+
+.button {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+  

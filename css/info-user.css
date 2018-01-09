@@ -1,0 +1,76 @@
+/* Gobal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #C2BAAA;
+}
+   
+body {
+  background-image: url("../assets/images/fondo.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+
+/* Styles for header */
+
+header {
+  text-align: center;
+}
+
+.badground {
+  background: rgba(14, 10, 10, 0.8);
+}
+
+.container-button {
+  margin-top: 35px;
+}
+
+.button {
+  border-radius: 50%
+}
+
+span {
+  color: linear-gradient(140deg, #173430 , #000, #173430);
+}
+
+hr {
+  margin-top: 0;
+}
+
+/* Styles for form */
+
+.container-input {
+  margin-bottom: 2rem;
+}
+
+input {
+background-color: transparent;
+}
+
+#input-float {
+  float: left;
+  margin-bottom: 2rem;
+}
+
+#input-left {
+  float: left;
+}
+
+.container-checkbox {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.container-button-next {
+  margin-top: 4rem;
+}
+
+.button-next {
+  background: transparent;
+  color: #fff;
+  margin-bottom: 2rem;
+}

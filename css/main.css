@@ -1,0 +1,30 @@
+/* Gobal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+  }
+    
+  /* Styles for splash view */
+  
+  .background {
+    background: linear-gradient(140deg, #173430 , #000, #173430);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img {
+    width: 55%;
+  }
