@@ -1,0 +1,71 @@
+/* Gobal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+     
+/* Styles for header */
+  
+header {
+  text-align: center;
+}
+
+h1 {
+  color: #292b3a;
+}
+
+.text-header {
+  font-size: 1.5rem;
+}
+
+hr {
+  margin-top: 0;
+}
+  
+/* Styles for form */
+
+.container-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.container-style {
+  color: #fff;
+  height: 12rem;
+  border-radius: 2rem; 
+  margin-bottom: 2rem;
+}
+
+.container-raza-console {
+  background-image: url("../assets/images/fifa.png");
+}
+
+.container-raza-pc {
+  background-image: url("../assets/images/fondo.png");
+}
+
+.container-raza-mobile {
+  background-image: url("../assets/images/mobile.png");
+}
+
+.text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+}
+
+.container-button-next {
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 3rem;
+}
+
+.button-next {
+  background-image: url("../assets/images/ondas.jpg");
+  color: #fff;
+}

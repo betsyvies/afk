@@ -1,0 +1,43 @@
+/* Gobal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+       
+ /* Styles for header */
+    
+header {
+  text-align: center;
+}
+    
+hr {
+  margin-top: 0;
+}
+ 
+/* Styles for Container videos */
+  
+.container-input {
+  width: 100%;
+  display: inline-flex;
+}
+
+.container-button-next {
+  background-color: #6bba55; 
+}
+  
+.button-cloud-upload {
+  border: none;
+  background-color: #6bba55;
+}
+
+.title-img {
+  color: #000;
+}
+  
+[alt="jugada"] {
+  width: 100%;
+  height: 20rem; 
+}
