@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #C2BAAA;
+  color: #fff;
 }
    
 body {
@@ -49,15 +49,21 @@ hr {
 
 .transparent {
 background: transparent;
+color: #fff;
 }
 
-#input-float {
-  float: left;
-  margin-bottom: 2rem;
+/* Style for placeholder */
+
+.transparent::placeholder { 
+  color: #fff; 
 }
 
-#input-left {
-  float: left;
+.text-color {
+  color: #fff;
+}
+
+.color {
+  color: #3f3f3f;
 }
 
 .container-checkbox {
@@ -73,5 +79,6 @@ background: transparent;
 .button-next {
   background: transparent;
   color: #fff;
-  margin-bottom: 17.8rem;
+  margin-bottom: 11.2rem;
 }
+
