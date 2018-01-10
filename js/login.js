@@ -11,7 +11,6 @@ function begin() {
 
     console.log(emailValidation);
     if (emailValue === emailValidation) {
-      console.log('ete es');
       return true;
     }
   }
@@ -21,7 +20,6 @@ function begin() {
     var passwordValidation = window.localStorage.getItem('validation');
     var passwordValue = $passwordAccess.val();
     if (passwordValue === passwordValidation) {
-      console.log('ete tambin es');
       return true;
     }
   }
@@ -36,6 +34,7 @@ function begin() {
   
   function redirectSight() {
     window.location.assign('plays.html');
+    alert('¡Bienvenido a la red más grande de gamers!');
   }
   
   /* Hacemos focus al input name */

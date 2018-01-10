@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-xs-12  container-header">
           <div class="col-xs-2 container-icon">
-            <a href="#">
+            <a href="#" data-toggle="modal" data-target="#modalGoUp">
               <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
             </a>
           </div>
@@ -112,12 +112,30 @@
         </div>
       </div>
     </div>
-
-    <!-- Import jQuery and Bootstrap.js -->
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/plays.js"></script>
+    <!-- Modal for Sign Up -->
+    <div class="modal fade" id="modalGoUp" tabindex="-1" role="dialog" aria-labelledby="modalGoUp">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content background-modal-singUp center-block">
+          <div class="modal-body background-modal-singUp-body ">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <form>
+              <div class="form-group row">
+                <div class="col-xs-12">
+                  <h3>Sube tu jugada del día</h3>
+                  <button id="sign-up" class="col-xs-12 btn btn-info button-cloud-upload" type="submit">Go up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Import jQuery and Bootstrap.js -->
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../js/plays.js"></script>
 </body>
 
 </html>

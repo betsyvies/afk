@@ -121,3 +121,13 @@ display: inline;
   border-radius: 100%;
   font-size: 2em;
 }
+/* Styles for modal */
+
+.fade {
+ top: 20rem;
+}
+
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
+}
