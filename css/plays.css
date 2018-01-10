@@ -78,6 +78,11 @@ body {
     margin-bottom: 0;
   }
 
+  .hamburger {
+    font-size: 1.3em;
+    margin-left: 3.5em;
+  }
+
   /*Estilos Imagen - videos*/
 
 .profile {
@@ -123,6 +128,7 @@ display: inline;
 }
 /* Styles for modal */
 
+<<<<<<< HEAD
 .fade {
  top: 20rem;
 }
@@ -130,4 +136,48 @@ display: inline;
 .button-cloud-upload {
   border: none;
   background-color: #173430;
+=======
+.background-modal {
+  width: 90%;
+  top: 1rem;
+}
+
+.background-modal span {
+  color: #000;
+}
+
+.background-modal h1 {
+  color: #000;
+}
+
+[alt="map-modal"] {
+  width: 100%;
+  height: 15rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-modal-body {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.container-text p{
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.color-button {
+  background-color: #F0AD4E;
+  margin-bottom: 1rem;
+}
+
+/*Modal styles*/
+
+.font-color {
+  color:#465945;;
+>>>>>>> eb5b73e3c8559c56b2edb992db18d1b5740e6cf0
 }

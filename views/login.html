@@ -15,9 +15,9 @@
 </head>
 
 <body>
-  <!-- Título-->
+  <!-- Title-->
   <div class="container-fluid">
-    <h1>Always for komrads</h1>
+    <h1>Always For Komrads</h1>
   </div>
   <br>
   <!-- User login in to its account -->
@@ -31,7 +31,7 @@
           <div class="form-group text-center">
             <input id="inputPassword" type="password" class="form-control transparent" placeholder="Password">
           </div>
-          <div class="form-group">
+          <div class="form-group" data-toggle="modal" data-target="#myModal">
             <p class="help-block text-center">If you have forgotten your password
               <a href="#">click here</a>
             </p>
@@ -47,35 +47,34 @@
       </div>
     </div>
   </div>
-  <!-- Modal for Sign Up -->
-  <div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUp">
+  <!-- Modal/pop-up: forgotten password -->
+  <div class="modal fade" tabindex="-1" role="dialog" id='myModal'>
     <div class="modal-dialog" role="document">
-      <div class="modal-content background-modal-singUp center-block">
-        <div class="modal-body background-modal-singUp-body ">
+      <div class="modal-content font-color">
+        <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <form>
-            <div class="form-group row">
-              <div class="col-xs-12">
-                <input id="email-register" class="form-control" type="text" placeholder="Correo Electronico: ejemplo@correo.mx">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-xs-12">
-                <input id="password-register" class="form-control" type="password" placeholder="Contraseña">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-xs-12">
-                <button id="sign-up" class="col-xs-12 btn btn-info" type="submit">ENVIAR</button>
-              </div>
-            </div>
-          </form>
+          <h4 class="modal-title font-color">Recupera tu contraseña</h4>
+        </div>
+        <div class="modal-body">
+          <p>En caso que no recuerde su contraseña, haga click en la opción
+            <b>SHOOT!</b> para mandar las preguntas de seguridad respectivas a su correo, caso contrario, puede cerrar la ventana.
+            Si tiene alguna consulta adicional escribános a:
+            <b> AFKgamingCorporation@gmail.com </b>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Shoot!</button>
         </div>
       </div>
+      <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
   </div>
+  <!-- /.modal -->
+
   <!-- Jquery - bootstrap -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>

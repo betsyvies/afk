@@ -15,70 +15,83 @@
 </head>
 
 <body>
+
   <!-- Navegation -->
   <nav class="navbar navbar-default navbar-fixed-top">
-    <!-- Title -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 container-header">
-          <div class="col-xs-12 container-header-title">
-            <h4>Jugadas del dia</h4>
+      <!-- Title -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-xs-12 container-header">
+            <div class="col-xs-10 col-md-10 container-header-title ">
+              <h4 class="text-center col-sm-12 col-md-10">Jugadas del dia</h4>
+              <!-- menu Header navbar -->
+              <div class="container-fluid">
+                <div class="dropdown col-xs-5 col-md-5 container-header-title">
+                  <button class="glyphicon glyphicon-menu-hamburger hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="true"></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li>
+                      <a href="../views/start.html" class="text-left">Cierra Sesión</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <hr>
       </div>
-      <hr>
-    </div>
-    <!-- Images / videos subidos por parte de usuarios -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12  container-header">
-          <div class="col-xs-2 container-icon">
-            <a href="#" data-toggle="modal" data-target="#modalGoUp">
-              <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="col-xs-10 container-game">
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
+      <!-- Images / videos subidos por parte de usuarios -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12  container-header">
+            <div class="col-xs-2 container-icon">
+              <a href="#">
+                <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="col-xs-10 container-game">
+              <div class="circle center-block col-xs-2 col-md-2"></div>
+              <div class="circle center-block col-xs-2 col-md-2"></div>
+              <div class="circle center-block col-xs-2 col-md-2"></div>
+              <div class="circle center-block col-xs-2 col-md-2"></div>
+              <div class="circle center-block col-xs-2 col-md-2"></div>
+            </div>
           </div>
         </div>
+        <hr>
       </div>
-      <hr>
-    </div>
-    <!-- Iconos  -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 container-header">
-          <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="#">
-              <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="#">
-              <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="#">
-              <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
-            </a>
+      <!-- Icons  -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 container-header">
+            <div class="col-xs-4  col-md-4 container-button-icon">
+              <a href="../views/newsfeed.html">
+                <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="col-xs-4  col-md-4 container-button-icon">
+              <a href="../views/plays.html">
+                <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="col-xs-4  col-md-4 container-button-icon" data-toggle="modal" data-target="#myModal">
+              <a href="#">
+                <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
+              </a>
+            </div>
           </div>
         </div>
+        <hr>
       </div>
-      <hr>
-    </div>
-  </nav>
+    </nav>
   <!-- profile information -->
   <br>
   <div class="container">
     <div class="row">
       <img src="../assets/images/perfil.jpg" class="profile img-responsive img-rounded center-block" alt="A-C">
-      <h3 id="name-user"></h3>
-      <p id="text-user" class="updates"></p>
+      <h3>Mouse_Perez86</h3>
+      <p class="updates">"Tu, yo y la consola, no se, piénsalo..."</p>
     </div>
   </div>
   <!-- Profile Update -->
@@ -112,30 +125,36 @@
         </div>
       </div>
     </div>
-    <!-- Modal for Sign Up -->
-    <div class="modal fade" id="modalGoUp" tabindex="-1" role="dialog" aria-labelledby="modalGoUp">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content background-modal-singUp center-block">
-          <div class="modal-body background-modal-singUp-body ">
+    <!-- Modal: Notification for when someone wants to contact you -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog font-color" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <form>
-              <div class="form-group row">
-                <div class="col-xs-12">
-                  <h3>Sube tu jugada del día</h3>
-                  <button id="sign-up" class="col-xs-12 btn btn-info button-cloud-upload" type="submit">Go up</button>
-                </div>
-              </div>
-            </form>
+            <h4 class="modal-title font-color">Match</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-center">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?, si es así,
+              <a class="text-center" href="../views/chat.html">Click aquí</a>
+              sino, puedes rechazarla en la opción 'Reject Request'! ¡Qué la aventura te acompañe!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
           </div>
         </div>
+        <!-- /.modal-content -->
       </div>
-      <!-- Import jQuery and Bootstrap.js -->
-      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-      <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="../js/plays.js"></script>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Import jQuery and Bootstrap.js -->
+    <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/plays.js"></script>
 </body>
 
 </html>

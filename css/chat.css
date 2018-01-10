@@ -1,0 +1,51 @@
+/*Global*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background-image: url(../assets/images/ac.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+ }
+
+/*Nav styles*/
+  .chat-img{
+    width: 5.5em;
+    height: 5.5em;
+    margin: 1em;
+    background-position: center top;
+    border: 3px solid #123524;
+    border-radius: 100%;
+  }
+
+	/*footer styles*/
+	
+
+  .shoot-button {
+    background: linear-gradient(145deg, #0f0f0f , #1a2421, #1c352d);
+    color:white;
+		font-family: 'Press Start 2P', cursive;
+		margin: 1em;
+ }
+
+/*Clases Reutilizables*/
+
+  .container-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+  .icon-two {
+    font-size: 2em;
+    margin-top: 1em;
+    text-decoration: none;
+		color: #195905;
+  }
+

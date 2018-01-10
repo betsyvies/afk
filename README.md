@@ -1,15 +1,22 @@
-# Lyft
+# AFK: Always for Komrads
+___  
 
-- Lyft es una web-app donde usted puede registrarse para acceder a nuestro servicio de calidad en el rubro de transporte, tambien tendrá acceso a tarifas y a la seguridad que se merece.
+### Integrantes:
+- Betsy Vidal
+- Franshesca Quezada
 
-## Objetivo
+___  
 
-- El objetivo de esta pagina es replicar la web-app de Lyft, cumpliendose los pasos necesarios para que el usuario pueda registrarse.
+## Objetivo:  
+
+![hand-console](assets/images/hand-console.png)
+
+- El objetivo de esta red social es unir a los amantes de los diversos videojuegos que hay en el mercado en un solo lugar, dado que diversos equipos solo pueden dar su opinion por forums o blogs. Además, si eres un principiante y no tienes contactos ni conocidos del mundo gamer, entonces esta plataforma es para tí!  
 
 ## Flujo de la aplicación
 
 - Vista splash con duración de 2 a 5 segundos que redirecciona a tu vista de inicio. 
-- La vista de inicio cuenta con dos botones, en esta ocasión seguiremos el flujo de SING UP.  
+- La vista de inicio cuenta con dos botones, en esta ocasión seguiremos el flujo de __SIGN UP__.  
 - En la siguiente vista tenemos un formulario donde usted puede escoger el país y debe ingresar su número de teléfono.
 - Una vez ingresado su número de teléfono se habilita el botón y al dar click se le enviará una alerta con un código y se le redireccionará a la siguiente vista. 
 - En la siguiente vista se debe ingresar el código dado anteriormente y una vez hecho esto se habilita el botón que le redireccionará a la vista donde ingresará sus datos
@@ -77,5 +84,4 @@
 - Vista Completed 
 
 ![Lyft](assets/images/readme/completed.png)
-
 
