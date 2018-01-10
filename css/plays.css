@@ -160,3 +160,9 @@ display: inline;
   background-color: #F0AD4E;
   margin-bottom: 1rem;
 }
+
+/*Modal styles*/
+
+.font-color {
+  color:purple!important;
+}

@@ -47,3 +47,9 @@ h1 {
 .transparent::placeholder { 
   color: #fff; 
 }
+
+/* style for modal */
+
+.font-color {
+  color:#465945;
+}
