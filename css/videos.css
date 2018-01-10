@@ -10,8 +10,8 @@
 body { 
   padding-top: 270px; 
 }
-
-/* Styles for header */
+     
+/* Styles for navegation */
 
 .container-header {
   height: 8rem;
@@ -78,8 +78,8 @@ hr {
   margin-bottom: 0;
 }
 
-/* Styles for Container imagenes */
-  
+/* Styles for Container videos */
+
 .container-input {
   width: 100%;
   display: inline-flex;
@@ -95,11 +95,11 @@ hr {
   background-color: #173430;
 }
 
-.title-img {
+.title-video {
   color: #000;
 }
-  
-[alt="jugada"] {
+
+.video {
   width: 100%;
   height: 20rem; 
 }

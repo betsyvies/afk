@@ -10,8 +10,8 @@
 body { 
   padding-top: 270px; 
 }
-
-/* Styles for header */
+       
+ /* Styles for header */
 
 .container-header {
   height: 8rem;
@@ -78,28 +78,25 @@ hr {
   margin-bottom: 0;
 }
 
-/* Styles for Container imagenes */
+/* Styles for Container notifications */
   
 .container-input {
   width: 100%;
   display: inline-flex;
 }
 
-.container-button-next {
-  border: none;
-  margin-top: 2rem;
-}
-  
-.button-cloud-upload {
-  border: none;
-  background-color: #173430;
+.background {
+  background-color: #fafafa;
 }
 
-.title-img {
+.container-notifications {
+  width: 100%;
+  display: inline-flex;
+  border-bottom: 1px solid #000; 
+}
+
+.text {
   color: #000;
+  width: 100%;
 }
   
-[alt="jugada"] {
-  width: 100%;
-  height: 20rem; 
-}

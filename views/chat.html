@@ -9,26 +9,60 @@
     <link type="text/css" rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
     <!-- tipo de letra -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!--font awesone cdn-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="../css/chat.css">
     <title>AFK</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12  container-header">
-                        <div class="col-xs-2 container-icon">
-                                <div class="col-xs-10 container-game">
-                                        <div class="circle center-block col-xs-2 col-md-2"></div>
-                                    </div>
-                        </div>
+    <!-- Navegation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <!-- Iconos  -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 container-header">
+                    <!-- friends chat image -->
+                    <div class="col-xs-4  col-md-4 container-button-icon">
+                        <a href="../views/plays.html">
+                            <span class="glyphicon glyphicon-menu-left icon-two" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4  col-md-4 container-button-icon">
+                        <a href="#">
+                            <figure>
+                                <img src="../assets/images/chat-img.jpg" alt="img-resposive" class="chat-img">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-xs-4  col-md-4 container-button-icon">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-earphone icon-two" aria-hidden="true"></span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <!-- chat from users side-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-bottom">
+                    <form class="navbar-form navbar-left " role="search">
+                        <div class="col-xs-12 col-md-12 colcontainer-button-icon">
+                            <input type="text" class="form-control" placeholder="Say 'Hi!' to your Komrad...">
+                        </div>
+                        <button type="submit" class="btn btn-default shoot-button">shoot!</button>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

@@ -1,3 +1,5 @@
+/*Global*/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +8,44 @@
 }
 
 body {
-  background: linear-gradient(90deg,#0f0f0f, #5d8aa8, #0f0f0f);
-}
+  background-image: url(../assets/images/ac.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+ }
 
-/*header style*/
-header {
-  position: fixed;
-}
-
-.circle {
-    display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    margin: 1rem;
-    border: 2px solid red;
+/*Nav styles*/
+  .chat-img{
+    width: 5.5em;
+    height: 5.5em;
+    margin: 1em;
+    background-position: center top;
+    border: 3px solid #123524;
     border-radius: 100%;
+  }
+
+	/*footer styles*/
+	
+
+  .shoot-button {
+    background: linear-gradient(145deg, #0f0f0f , #1a2421, #1c352d);
+    color:white;
+		font-family: 'Press Start 2P', cursive;
+		margin: 1em;
+ }
+
+/*Clases Reutilizables*/
+
+  .container-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items:center
 }
 
-.icon-header{
+  .icon-two {
     font-size: 2em;
-}
+    margin-top: 1em;
+    text-decoration: none;
+		color: #195905;
+  }
+
