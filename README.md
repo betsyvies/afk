@@ -9,7 +9,7 @@ ___
 
 ## Objetivo:  
 
-![hand-console](../assets/images/hand-console.png)
+![hand-console](../assets/images/../hand-console.png)
 
 - El objetivo de esta red social es unir a los amantes de los videojuegos de diversos grupos para que puedan
 
