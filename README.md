@@ -81,7 +81,7 @@ ___
 
 - Vista Splash:
 
-![AFK_plash](assets/images/readme/index.png)
+![AFK_plash](./assets/images/readme/index.png)
 
 
 
