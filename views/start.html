@@ -26,12 +26,30 @@
         <div class="col-xs-6">
           <a id="log-in" class="btn btn-default button" href="#" role="button">LOG IN</a>
         </div>
-        <div class="col-xs-6">
-          <a id="sing-up" class="btn btn-default button" href="#" role="button">SIGN UP</a>
+        <div class="col-xs-6" data-toggle="modal" data-target="#myModals">
+          <a id="sing-up" class="btn btn-default button" href="#" role="button">REGISTER</a>
         </div>
       </div>
     </div>
   </div>
+  <!-- Modal: Register -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModals" >
+      <div class="modal-dialog font-color" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title font-color">Match</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-center">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
+            <button type="button" class="btn btn-primary">Accept Quest</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   <!-- Import jQuery and Bootstrap.js -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>

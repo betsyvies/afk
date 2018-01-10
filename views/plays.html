@@ -62,10 +62,10 @@
               <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
             </a>
           </div>
-          <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="../views/notifications.html">
+          <div class="col-xs-4  col-md-4 container-button-icon" data-toggle="modal" data-target="#myModal">
+              <a href="#">
               <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
-            </a>
+              </a>
           </div>
         </div>
       </div>
@@ -112,6 +112,24 @@
         </div>
       </div>
     </div>
+    <!-- Modal: Notification for when someone wants to contact you -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal" >
+        <div class="modal-dialog font-color" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title font-color">Match</h4>
+            </div>
+            <div class="modal-body">
+              <p class="text-center">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
+              <button type="button" class="btn btn-primary">Accept Quest</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
     <!-- Import jQuery and Bootstrap.js -->
     <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
