@@ -99,4 +99,11 @@ hr {
   color: #000;
   width: 100%;
 }
+
+/* Modal day*/ 
+
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
+}
   

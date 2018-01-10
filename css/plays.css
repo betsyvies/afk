@@ -126,17 +126,9 @@ display: inline;
   border-radius: 100%;
   font-size: 2em;
 }
+
 /* Styles for modal */
 
-<<<<<<< HEAD
-.fade {
- top: 20rem;
-}
-
-.button-cloud-upload {
-  border: none;
-  background-color: #173430;
-=======
 .background-modal {
   width: 90%;
   top: 1rem;
@@ -179,5 +171,11 @@ display: inline;
 
 .font-color {
   color:#465945;;
->>>>>>> eb5b73e3c8559c56b2edb992db18d1b5740e6cf0
+}
+
+/* Modal day*/ 
+
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
 }
