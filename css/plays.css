@@ -78,6 +78,11 @@ body {
     margin-bottom: 0;
   }
 
+  .hamburger {
+    font-size: 1.3em;
+    margin-left: 3.5em;
+  }
+
   /*Estilos Imagen - videos*/
 
 .profile {

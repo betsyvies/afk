@@ -17,62 +17,74 @@
 
 <body>
   <!-- Navegation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <!-- Title -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 container-header">
-            <div class="col-xs-12 container-header-title">
-              <h4>Jugadas del dia</h4>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- Title -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-xs-12 container-header">
+          <div class="col-xs-10 col-md-10 container-header-title ">
+            <h4 class="text-center col-sm-12 col-md-10">Jugadas del dia</h4>
+            <!-- menu Header navbar -->
+            <div class="container-fluid">
+              <div class="dropdown col-xs-5 col-md-5 container-header-title">
+                <button class="glyphicon glyphicon-menu-hamburger hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="true"></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li>
+                    <a href="../views/start.html" class="text-left">Cierra Sesión</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <hr>
       </div>
-      <!-- Images / videos uploaded by users -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12  container-header">
-            <div class="col-xs-2 container-icon">
-              <a href="#">
-                <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
-              </a>
-            </div>
-            <div class="col-xs-10 container-game">
-              <div class="circle center-block col-xs-2 col-md-2"></div>
-              <div class="circle center-block col-xs-2 col-md-2"></div>
-              <div class="circle center-block col-xs-2 col-md-2"></div>
-              <div class="circle center-block col-xs-2 col-md-2"></div>
-              <div class="circle center-block col-xs-2 col-md-2"></div>
-            </div>
+      <hr>
+    </div>
+    <!-- Images / videos subidos por parte de usuarios -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12  container-header">
+          <div class="col-xs-2 container-icon">
+            <a href="#">
+              <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="col-xs-10 container-game">
+            <div class="circle center-block col-xs-2 col-md-2"></div>
+            <div class="circle center-block col-xs-2 col-md-2"></div>
+            <div class="circle center-block col-xs-2 col-md-2"></div>
+            <div class="circle center-block col-xs-2 col-md-2"></div>
+            <div class="circle center-block col-xs-2 col-md-2"></div>
           </div>
         </div>
-        <hr>
       </div>
-      <!-- Icons -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 container-header">
-            <div class="col-xs-4  col-md-4 container-button-icon">
-              <a href="../views/newsfeed.html">
-                <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
-              </a>
-            </div>
-            <div class="col-xs-4  col-md-4 container-button-icon">
-              <a href="../views/plays.html">
-                <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
-              </a>
-            </div>
-            <div class="col-xs-4  col-md-4 container-button-icon">
-              <a href="../views/notifications.html">
-                <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
-              </a>
-            </div>
+      <hr>
+    </div>
+    <!-- Icons  -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 container-header">
+          <div class="col-xs-4  col-md-4 container-button-icon">
+            <a href="../views/newsfeed.html">
+              <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="col-xs-4  col-md-4 container-button-icon">
+            <a href="../views/plays.html">
+              <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="col-xs-4  col-md-4 container-button-icon" data-toggle="modal" data-target="#myModal">
+            <a href="#">
+              <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
+            </a>
           </div>
         </div>
-        <hr>
       </div>
-    </nav>
+      <hr>
+    </div>
+  </nav>
   <!-- Section Container Notifications -->
   <section>
     <div class="container-fluid">
