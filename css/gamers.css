@@ -6,8 +6,26 @@
   box-sizing: border-box;
 }
 
+/* Clase pink de background */
+.pink {
+  background-color: #e9167f;
+}
+
+.green {
+  background-color: #1be770;
+}
+
+.blue {
+  background-color: #3c26b8;
+}
+
+.yellow {
+  background-color: #ffdf11;
+}
+
 body { 
   padding-top: 100px; 
+  background-color: #000;
 }
        
 /* Styles for header */
