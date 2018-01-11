@@ -7,6 +7,15 @@
   color: #fff;
 }
    
+/* Clases generales*/
+
+.yellow {
+  color: rgb(255, 217, 0);
+}
+
+.space {
+  margin-top: 1em;
+}
 body {
   background-image: url("../assets/images/fondo.png");
   background-size: 100vw 100vh;
@@ -16,6 +25,7 @@ body {
 }
 
 /* Styles for header */
+
 
 header {
   text-align: center;
@@ -35,9 +45,19 @@ span {
 
 hr {
   margin-top: 0;
+  height: 1px;
+  width: 50%;
+  background-color: rgb(255, 217, 0);
+  border: 1px solid rgb(255, 217, 0);
 }
 
 /* Styles for form */
+
+form {
+  border: 2px solid rgb(255, 217, 0);
+  border-radius: 5px;
+  padding: 2em 2em;
+}
 
 .container-input {
   margin-bottom: 2rem;
@@ -46,6 +66,16 @@ hr {
 .transparent {
 background: transparent;
 color: #fff;
+}
+
+/* Estilo de focus de los inputs */
+.focus-input {
+  border-color: rgb(255, 217, 0);
+  border-color:rgba(255, 217, 0.8);
+  outline: 0;
+  outline: thin dotted\9;
+  -webkit-box-shadow: 0 0 8px rgba(255, 217, 0, 0.6);
+  box-shadow: 0 0 8px rgba(255, 217, 0, 0.6);
 }
 
 /* Style for placeholder */
@@ -73,8 +103,8 @@ color: #fff;
 }
 
 .button-next {
-  background: transparent;
-  color: #fff;
+  background: #fff;
+  color: rgb(255, 217, 0);;
 }
 
 
