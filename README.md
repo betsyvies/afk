@@ -15,13 +15,12 @@ ___
 
 ## Flujo de la aplicación
 
-- Vista splash con duración de 2 a 5 segundos que redirecciona a tu vista de inicio. 
-- La vista de inicio cuenta con dos botones, en esta ocasión seguiremos el flujo de __SIGN UP__.  
-- En la siguiente vista tenemos un formulario donde usted puede escoger el país y debe ingresar su número de teléfono.
-- Una vez ingresado su número de teléfono se habilita el botón y al dar click se le enviará una alerta con un código y se le redireccionará a la siguiente vista. 
-- En la siguiente vista se debe ingresar el código dado anteriormente y una vez hecho esto se habilita el botón que le redireccionará a la vista donde ingresará sus datos
-- Una vez cerrado el modal vuelve a la vista principal.
-- Para finalizar se le mostrará una vista que le indicá que ha concluido con el registro exitosamente. 
+- Vista splash con duración de 2 a 5 segundos que redirecciona a tu vista de inicio.
+- La vista de inicio cuenta con dos botones, en esta ocasión seguiremos el flujo de SIGN UP.
+- En la siguiente vista tenemos el flujo de LOGIN donde usted debe ingresar su email y contraseña con el que se registro.
+- Una vez ingresado su email y contraseña se habilita el botón y al dar click se le enviará una alerta de bienvenida y se le redireccionará a la vista de perfil.
+- En la vista de perfil usted puede personalizar lo, subir videos, fotos, buscar a sus amigos entre otras cosas.
+- Una vez cerrado el perfil vuelve a la vista principal.
 
 ## Flujo de trabajo
 
