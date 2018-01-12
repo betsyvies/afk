@@ -124,7 +124,7 @@ ___
 
 9. Vista Contacts:
 
-![AFK_Con.](../assets/readme/10-cont.png)
+![AFK_Con.](./assets/readme/10-cont.png)
 
 10. Vista Chat:
 
