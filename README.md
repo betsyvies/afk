@@ -134,7 +134,7 @@ ___
 
   - Parte II:
 
-![AFK_Chat 2](/assets/images/readme/11.1-chat.png)
+![AFK_Chat 2](../assets/images/readme/11.1-chat.png)
 
 
 
