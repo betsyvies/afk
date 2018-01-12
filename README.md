@@ -70,33 +70,27 @@ ___
 
 - [Bootstrap] : https://getbootstrap.com/docs/3.3/css/#forms
 
-
-- [Jquery] : 
-https://oscarotero.com/jquery/
-
-___
-
-## Vistas Principales: 
+## Vistas Principales Mobile: 
 
 1. Vista Splash:
 
-![AFK_Splash](assets/readme/1.png)
+![AFKSplash](assets/readme/1.png)
 
 2. Vista Start:
 
-![AFK_Start](assets/readme/2.png)
+![AFKStart](assets/readme/2.png)
 
 3. Vista Sign-Up:
 
-![AFK_SignUp](assets/readme/3.png)
+![AFKSignUp](assets/readme/3.png)
 
 4. Vista Log-In:
 
-![AFK_LogIn](assets/readme/4.png)
+![AFKLogIn](assets/readme/4.png)
 
   - Vista Log-In Alert:
 
-![AFK_LogInAlert](assets/readme/4.1.png)
+![AFKLogInAlert](assets/readme/4.1.png)
 
 5. Vista Categories:
 
@@ -104,11 +98,11 @@ ___
 
 6. Vista profile:
 
-![AFK_prof](assets/readme/6.png)
+![AFKprof](assets/readme/6.png)
 
   - Opción Imagenes:
 
-![AFK_prof](assets/readme/6-im.png)
+![AFKprof](assets/readme/6-im.png)
 
   - Opción Videos:
   
@@ -130,11 +124,11 @@ ___
 
   - Parte I:
 
-![chat](assets/readme/11.png)
+![chat](assets/readMe/11.png)
 
   - Parte II:
 
-![AFK_Chat 2](https://github.com/betsyvies/afk/edit/fran-branch/README.md/assets/readme/11.1-chat.png)
+![AFK_Chat 2](assets/readMe/11.1-chat.png)
 
 
 
