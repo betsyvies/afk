@@ -41,6 +41,7 @@ hr {
   height: 12rem;
   border-radius: 2rem; 
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .container-raza-console {
@@ -58,14 +59,4 @@ hr {
 .text {
   font-family: 'Press Start 2P', cursive;
   font-size: 2rem;
-}
-
-.container-button-next {
-  font-family: 'Press Start 2P', cursive;
-  margin-top: 3rem;
-}
-
-.button-next {
-  background-image: url("../assets/images/ondas.jpg");
-  color: #fff;
 }

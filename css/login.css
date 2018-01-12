@@ -5,6 +5,14 @@
   padding: 0;
 }
 
+.red{
+  color: rgb(253, 0, 2);
+}
+
+.space {
+  margin-top: 1em;
+}
+
 body {
   background-image: url(../assets/images/group.png);
   background-size: 100vw 100vh;
@@ -15,25 +23,47 @@ body {
 }
 
 /* Styles for container */
+
 h1 {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   color:white;
 }
 
+hr {
+  margin-top: 0;
+  height: 1px;
+  width: 50%;
+  background-color: rgb(253, 0, 2);
+  border: 1px solid rgb(253, 0, 2);
+}
+
 .help-block {
   color:white;
 }
 
-#submit {
+/* Style for form */
+
+form {
+  border: 2px solid rgb(253, 0, 2);
+  border-radius: 5px;
+  padding: 2em 2em;
+}
+
+/* Style for button*/
+
+.container-button-next {
+  margin-top: 2rem;
+}
+
+.button-next {
   font-family: 'Press Start 2P', cursive;
 }
 
-#submit {
-  background-color: transparent;
-  border: 1px solid white;
-  outline: none;
-  color: #fff;
+.button-next {
+  background: #fff;
+  color: rgb(253, 0, 2);
+  margin-bottom: 1em;
   padding: 1rem 2rem;
 }
 
@@ -41,15 +71,51 @@ h1 {
   background: transparent;
   color: #fff;
 }
-  
+
+/* Estilo de focus de los inputs */
+
+.focus-input {
+  border-color: rgb(253, 0, 2);
+  border-color:rgb(253, 0, 2, 0.8);
+  outline: 0;
+  outline: thin dotted\9;
+  -webkit-box-shadow: 0 0 8px rgb(253, 0, 2, 0.6);
+  box-shadow: 0 0 8px rgb(253, 0, 2, 0.6);
+}
+
 /* Style for placeholder */
   
 .transparent::placeholder { 
   color: #fff; 
 }
 
+/* Stytles for modal sing up */
+
+.background-modal-singUp {
+  background-color: #A9A9A9;
+  color: #000;
+  top: 10rem;
+}
+
+.background-modal-singUp-body {
+  border-radius: 1.5rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.button-color {
+  background-color: #000;
+  color: #fff;
+}
+
+.background-button {
+  background-color: #DDDDDD;
+}
+
 /* style for modal */
 
 .font-color {
-  color:#465945;
+  color: #465945;
 }

@@ -46,6 +46,15 @@ h4 {
   height: 4rem;
 }
 
+.container-close {
+  margin-right: 2rem;
+}
+
+.modify {
+  background: transparent;
+  border: 0;
+}
+
 .plus {
   display: inline-block;
   color: #fff;
@@ -83,6 +92,7 @@ hr {
 .container-input {
   width: 100%;
   display: inline-flex;
+  margin-bottom: 2rem;
 }
 
 .container-button-next {
@@ -95,11 +105,35 @@ hr {
   background-color: #173430;
 }
 
+.container-img {
+  margin-bottom: 2rem;
+}
+
 .title-img {
   color: #000;
+  text-align: center;
 }
   
 [alt="jugada"] {
   width: 100%;
   height: 20rem; 
+}
+
+/* Modal styles */
+
+.font-color {
+  color:#465945;;
+}
+
+.color {
+  color: #000;
+  text-align: center;
+}
+
+/* Modal day*/ 
+
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
+  margin-top: 2rem;
 }

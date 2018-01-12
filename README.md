@@ -60,7 +60,7 @@ ___
 - Html, para la estructura del contenido.
 - Css, para darle estilo al contenido.
 - Bootstrap
-- Jquery
+- Jquery/ JS
 
 ___
 
@@ -70,7 +70,6 @@ ___
 
 - [Bootstrap] : https://getbootstrap.com/docs/3.3/css/#forms
 
-- [W3School] : https://www.w3schools.com/bootstrap/bootstrap_forms.asp
 
 - [Jquery] : 
 https://oscarotero.com/jquery/
@@ -79,9 +78,68 @@ ___
 
 ## Vistas Principales: 
 
-- Vista Splash:
+1. Vista Splash:
 
-![AFK_plash](../assets/images/readme/index.png)
+![AFK_Splash](../assets/readme/1.png)
+
+2. Vista Start:
+
+![AFK_Start](../assets/readme/2.png)
+
+3. Vista Sign-Up:
+
+![AFK_SignUp](../assets/readme/3.png)
+
+4. Vista Log-In:
+
+![AFK_LogIn](../assets/readme/4.png)
+
+  - Vista Log-In Alert:
+
+![AFK_LogInAlert](../assets/readme/4.1.png)
+
+5. Vista Categories:
+
+![AFK_Cat.](../assets/readme/5.png)
+
+6. Vista profile:
+
+![AFK_prof](../assets/readme/6.png)
+
+  - Opción Imagenes:
+
+![AFK_prof](../assets/readme/6-im.png)
+
+  - Opción Videos:
+  
+![AFK_prof](../assets/readme/7-vid.png)
+
+7. Vista NewsFeed:
+
+![AFK_NF](../assets/readme/8-nf.png)
+
+8. Vista Notifications:
+
+![AFK_Not](../assets/readme/9-not.png)
+
+9. Vista Contacts:
+
+![AFK_Con.](../assets/readme/10-cont.png)
+
+10. Vista Chat:
+
+  - Parte I:
+
+![AFK_Con.](../assets/readme/11.png)
+
+  - Parte II:
+
+![AFK_Con.](../assets/readme/11.1-chat.png)
+
+
+
+
+
 
 
 

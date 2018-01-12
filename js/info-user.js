@@ -11,22 +11,29 @@ function begin() {
   function isNameValid() {
   /* Usaremos una expresion regular para validar que escriba bien su nombre */
     var PATERNNAME = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/ ;
+    var name = $name.val();
+    localStorage.setItem('name', name);
+
     return PATERNNAME.test($name.val());
   }
   
   function isEmailValid() {
     /* Usaremos una expresion regular para validar que escriba bien su correo*/
     var PATERNEMAIL = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
+    var email = $email.val();
+    localStorage.setItem('email', email);
+    
     return PATERNEMAIL.test($email.val());
   }
 
   function isPasswordAgainValid() {
-    /* Usaremos una expresion regular para validar que escriba una contraseña segura*/
+    /* Validamos que la contraseña sea la misma*/
     var validation = $password.val();
-    var validationAgain = $passwordAgain.val();
+    console.log($password.val());
 
-    /* Utilizamos este metodo para traer el valor validation */
-    var validation = window.localStorage.getItem('validation');
+    var validationAgain = $passwordAgain.val();
+    localStorage.setItem('validation', validation);
+
     if (validationAgain === validation) {
       return true;
     }
@@ -34,6 +41,9 @@ function begin() {
 
   function isGenderValid() {
     /* Si hay valor en el elemento select se muestra true */
+    var gender = $gender.val();
+    localStorage.setItem('gender', gender);
+
     if ($gender.val()) {
       return true;
     }
@@ -48,7 +58,7 @@ function begin() {
   }
   
   function redirectSight() {
-    window.location.assign('plays.html');
+    window.location.assign('login.html');
   }
   
   /* Hacemos focus al input name */
@@ -66,12 +76,10 @@ function begin() {
 
   $passwordAgain
     .focus(isPasswordAgainValid)
-    .on('keyup', isPasswordAgainValid)
-    .on('keyup', formStateEvent);
+    .on('keyup', isPasswordAgainValid);
 
   $gender
-    .on('change', isGenderValid)
-    .on('change', formStateEvent);
+    .on('change', isGenderValid);
     
   $checkbox
     .on('click', formStateEvent);
