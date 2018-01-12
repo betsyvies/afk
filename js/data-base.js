@@ -1,25 +1,38 @@
-$(document).ready(function() {
-  var $redirectorButton = $('#redirector-button'); 
-  $redirectorButton.on('click', function() {
-  // Initialize Firebase
-    var config = {
-      apiKey: 'AIzaSyCq-aTRPC94e5Hv-zUk3jVH39BF1huXQKE',
-      authDomain: 'always-for-komrads.firebaseapp.com',
-      databaseURL: 'https://always-for-komrads.firebaseio.com',
-      projectId: 'always-for-komrads',
-      storageBucket: 'always-for-komrads.appspot.com',
-      messagingSenderId: '81850384224'
-    };
-    firebase.initializeApp(config);
+/* Hacemos un objeto para en el agregar el name, email, password y genero */
+var user = {
+  'gamer1': {
 
-    var email = $('#email').val();
-    var password = $('#inputPassword').val();
+  },
+  'gamer2': {
 
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-    // ...
-    });
-  });
-});
+  },
+  'gamer3': {
+
+  },
+  'gamer4': {
+
+  },
+  'gamer5': {
+
+  },
+};
+
+var nameValidation = window.localStorage.getItem('name');
+var emailValidation = window.localStorage.getItem('email');
+var passwordValidation = window.localStorage.getItem('validation');
+var genderValidation = window.localStorage.getItem('gender');
+var razaValidation = window.localStorage.getItem('raza');
+
+/* Con esta funcion agregamos elementos al objeto user */
+
+for (var i = localStorage.length; i < localStorage.length; i++) {
+  user['gamers' + i] = i;
+}
+
+user['gamer1']['name'] = nameValidation;
+user['gamer1']['email'] = emailValidation;
+user['gamer1']['password'] = passwordValidation;
+user['gamer1']['gender'] = genderValidation;
+user['gamer1']['raza'] = razaValidation;
+
+console.log(user);

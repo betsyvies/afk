@@ -11,6 +11,9 @@ function begin() {
   function isNameValid() {
   /* Usaremos una expresion regular para validar que escriba bien su nombre */
     var PATERNNAME = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/ ;
+    var name = $name.val();
+    localStorage.setItem('name', name);
+
     return PATERNNAME.test($name.val());
   }
   
@@ -38,6 +41,9 @@ function begin() {
 
   function isGenderValid() {
     /* Si hay valor en el elemento select se muestra true */
+    var gender = $gender.val();
+    localStorage.setItem('gender', gender);
+
     if ($gender.val()) {
       return true;
     }
