@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <!-- Import Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Import Bootstrap.css-->
+  <!-- Import Bootstrap.css -->
   <link type="text/css" rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="../css/newsfeed.css">
 </head>
@@ -21,22 +21,25 @@
     <!-- Title -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12 col-xs-12 container-header">
-          <div class="col-xs-10 col-md-10 container-header-title ">
-            <h4 class="text-center col-sm-12 col-md-10">Jugadas del dia</h4>
-            <!-- menu Header navbar -->
-            <div class="container-fluid">
-              <div class="dropdown col-xs-5 col-md-5 container-header-title">
-                <button class="glyphicon glyphicon-menu-hamburger hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="true"></button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="../views/start.html" class="text-left">Cierra Sesión</a>
-                  </li>
-                </ul>
-              </div>
+        <!-- menu Header navbar -->
+        <div class="col-xs-12 col-md-12 container-header container-header-title">
+          <nav class="navbar navbar-inverse navbar-fixed-top modify">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle color-grey-white" data-toggle="collapse" data-target="#myNavbar">
+                <span class="color-grey icon-bar"></span>
+                <span class="color-grey icon-bar"></span>
+                <span class="color-grey icon-bar"></span>
+              </button>
+              <h4 class="text-center col-sm-8 col-md-8">Jugadas del dia</h4>
             </div>
-          </div>
+            <div class="collapse navbar-collapse clearfix hamburger-nav" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="../views/start.html" class="text-rigth container-close">Close</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
       <hr>
@@ -47,7 +50,7 @@
         <div class="col-xs-12  container-header">
           <div class="col-xs-2 container-icon">
             <a href="#">
-              <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true" data-toggle="modal" data-target="#modalDay"></span>
             </a>
           </div>
           <div class="col-xs-10 container-game">
@@ -66,7 +69,7 @@
       <div class="row">
         <div class="col-xs-12 container-header">
           <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="../views/newsfeed.html">
+            <a href="#">
               <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
             </a>
           </div>
@@ -91,86 +94,66 @@
       <div class="row background">
         <div class="col-xs-12">
           <div class="input-group container-input">
-            <span class="input-group-addon">
+            <span id="button-game" class="input-group-addon">
               <i class="fa fa-gamepad icon-game" aria-hidden="true"></i>
             </span>
-            <input id="user" type="text" class="form-control" name="user" placeholder="Report your mission, soldier...">
+            <textarea id="comment" class="form-control" rows="2" placeholder="Report your mission, soldier..."></textarea>
           </div>
         </div>
-        <div class="col-xs-12 container-user">
-          <div class="col-xs-3 container-user">
-            <i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
-          </div>
-          <div class="col-xs-9 container-user">
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim eaque beatae voluptatibus itaque cum?
-              Dolorem deleniti optio a incidunt aperiam facilis. Cumque nemo iure nisi ipsa quibusdam odit? Distinctio.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 container-user">
-          <div class="col-xs-3 container-user">
-            <i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
-          </div>
-          <div class="col-xs-9 container-user">
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim eaque beatae voluptatibus itaque cum?
-              Dolorem deleniti optio a incidunt aperiam facilis. Cumque nemo iure nisi ipsa quibusdam odit? Distinctio.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 container-user">
-          <div class="col-xs-3 container-user">
-            <i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
-          </div>
-          <div class="col-xs-9 container-user">
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim eaque beatae voluptatibus itaque cum?
-              Dolorem deleniti optio a incidunt aperiam facilis. Cumque nemo iure nisi ipsa quibusdam odit? Distinctio.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 container-user">
-          <div class="col-xs-3 container-user">
-            <i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
-          </div>
-          <div class="col-xs-9 container-user">
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim eaque beatae voluptatibus itaque cum?
-              Dolorem deleniti optio a incidunt aperiam facilis. Cumque nemo iure nisi ipsa quibusdam odit? Distinctio.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 container-user">
-          <div class="col-xs-3 container-user">
-            <i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>
-          </div>
-          <div class="col-xs-9 container-user">
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim eaque beatae voluptatibus itaque cum?
-              Dolorem deleniti optio a incidunt aperiam facilis. Cumque nemo iure nisi ipsa quibusdam odit? Distinctio.
-            </p>
-          </div>
+        <div id="container-comment" class="col-xs-12">        
         </div>
       </div>
     </div>
   </section>
-   <!-- Modal for day -->
-   <div class="modal fade" id="modalDay" tabindex="-1" role="dialog" aria-labelledby="modalDay">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content background-modal-singUp center-block">
-          <div class="modal-body background-modal-singUp-body ">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <form>
-              <div class="form-group row">
-                <div class="col-xs-12">
-                  <button class="col-xs-12 btn btn-info button-cloud-upload" type="submit">GO UP</button>
-                </div>
-              </div>
-            </form>
-          </div>
+  <!-- Modal: Notification for when someone wants to contact you -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog font-color" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title font-color">Match</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-center color">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?, si es así,
+            <a class="text-center" href="../views/chat.html">Click aquí</a>
+            sino, puedes rechazarla en la opción 'Reject Request'! ¡Qué la aventura te acompañe!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
         </div>
       </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+  <!-- Modal for day -->
+  <div class="modal fade" id="modalDay" tabindex="-1" role="dialog" aria-labelledby="modalDay">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content background-modal-singUp center-block">
+        <div class="modal-body background-modal-singUp-body ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="color" aria-hidden="true">&times;</span>
+          </button>
+          <form>
+            <div class="form-group row">
+              <div class="col-xs-12">
+                <h3 class="color">Sube tus experiencias del día</h3>
+                <button class="col-xs-12 btn btn-info button-cloud-upload" type="submit">GO UP</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Import jQuery and Bootstrap.js -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
   <script type="text/javascript" src="../js/newsfeed.js"></script>
 </body>
 

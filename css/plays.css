@@ -6,82 +6,91 @@ padding: 0;
 }
 
 body {
-    padding-top:270px;
+  padding-top:270px;
 }
 
- /* Styles for header */
+/* Styles for header */
 
- .container-header {
-    height: 8rem;
-    display: flex;
-    justify-content: center;
-    background-color: #0b0e11;
-  }
+.container-header {
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  background-color: #0b0e11;
+}
   
-  .container-header-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.container-header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .container-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .container-game {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.container-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  h4 {
-    font-family: 'Press Start 2P', cursive;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    color: white;
-  }
-  
-  .plus {
-    display: inline-block;
-    color: #fff;
-    font-size: 3em;
-  }
-  
-  div .circle{
-    display: inline-block;
-    height: 4rem;
-    width: 4rem;
-    margin-right: 0.2rem;
-    background: #fff;
-    border: 2px solid #fff;
-    border-radius: 100%;
-  }
-  
-  .container-button-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon-two {
-    font-size: 2em;
-    text-decoration: none;
-    color: white;
-  }
-  
-  hr {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+h4 {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  color: white;
+}
 
-  .hamburger {
-    font-size: 1.3em;
-    margin-left: 3.5em;
-  }
+.container-close {
+  margin-right: 2rem;
+}
+
+.modify {
+  background: transparent;
+  border: 0;
+}
+ 
+.plus {
+  display: inline-block;
+  color: #fff;
+  font-size: 3em;
+}
+  
+div .circle{
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 0.2rem;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+  
+.container-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.icon-two {
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
+}
+  
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hamburger {
+  font-size: 1.3em;
+  margin-left: 3.5em;
+}
 
   /*Estilos Imagen - videos*/
 
@@ -173,9 +182,15 @@ display: inline;
   color:#465945;;
 }
 
+.color {
+  color: #000;
+}
+
 /* Modal day*/ 
 
 .button-cloud-upload {
   border: none;
   background-color: #173430;
+  margin-top: 2rem;
 }
+

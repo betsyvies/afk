@@ -23,25 +23,29 @@
     <!-- Title -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12 col-xs-12 container-header">
-          <div class="col-xs-10 col-md-10 container-header-title ">
-            <h4 class="text-center col-sm-12 col-md-10">Jugadas del dia</h4>
-            <!-- menu Header navbar -->
-            <div class="container-fluid">
-              <div class="dropdown col-xs-5 col-md-5 container-header-title">
-                <button class="glyphicon glyphicon-menu-hamburger hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="true"></button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="../views/start.html" class="text-left">Cierra Sesión</a>
-                  </li>
-                </ul>
-              </div>
+        <!-- Menu Header navbar -->
+        <div class="col-xs-12 col-md-12 container-header container-header-title">
+          <nav class="navbar navbar-inverse navbar-fixed-top modify">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle color-grey-white" data-toggle="collapse" data-target="#myNavbar">
+                <span class="color-grey icon-bar"></span>
+                <span class="color-grey icon-bar"></span>
+                <span class="color-grey icon-bar"></span>
+              </button>
+              <h4 class="text-center col-sm-8 col-md-8">Jugadas del dia</h4>
             </div>
-          </div>
+            <div class="collapse navbar-collapse clearfix hamburger-nav" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="../views/start.html" class="text-rigth container-close">Close</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
-      <hr>
+    </div>
+    <hr>
     </div>
     <!-- Images / videos subidos por parte de usuarios -->
     <div class="container-fluid">
@@ -86,98 +90,110 @@
       </div>
       <hr>
     </div>
-  </nav>
-  <!-- profile information -->
-  <br>
-  <div class="container">
-    <div class="row">
-      <img src="../assets/images/perfil.jpg" class="profile img-responsive img-rounded center-block" alt="A-C">
-      <h3 id="name-profile"></h3>
+    </nav>
+    <!-- profile information -->
+    <br>
+    <div class="container">
+      <div class="row">
+        <img src="../assets/images/perfil.jpg" class="profile img-responsive img-rounded center-block" alt="A-C">
+        <h3 id="name-profile"></h3>
         <div class="col-xs-12">
-          <p class="updates">"Tu, yo y la consola, no se, piénsalo..." <i class="fa fa-pencil" aria-hidden="true"></i></p>
+          <p id="container-phrase" class="updates">
+            <span id="span-phrase">"Tu, yo y la consola, no se, piénsalo..."</span>
+          </p>
         </div>
-    </div>
-  </div>
-  <!-- Profile Update -->
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock" placeholder="Cuentanos, tus aventuras del día...">
       </div>
     </div>
-  </div>
-  <br>
-  <div class="container">
-    <div class="row">
-      <!-- Uploading options: videos -->
-      <div class="col-xs-12 col-lg-12 container-button">
-        <div class="col-xs-6 col-md-6">
-          <a class="btn btn-default buttons center-block" href="#" role="button">Videos</a>
-        </div>
-        <!-- Uploading options: Images -->
-        <div class="col-xs-6 col-md-6">
-          <a id="sign-up" class="btn btn-default buttons center-block" href="#" role="button">Imagenes</a>
+    <!-- Profile Update -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <form>
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button id="button-icon" class="btn btn-default" type="button">
+                  <i class="fa fa-pencil icon-pencil" aria-hidden="true"></i>
+                </button>
+              </span>
+              <input id="input" type="text" class="form-control" name="restaurants" placeholder="Cuentanos, tus aventuras del día...">
+            </div>
+          </form>
         </div>
       </div>
     </div>
     <br>
-    <!-- "like" Option -->
-    <div class="container col-xs-12 col-lg-12">
+    <div class="container">
       <div class="row">
-        <div class="col thumbs-container">
-          <span class="glyphicon glyphicon-thumbs-up thumbs center-block" aria-hidden="true"></span>
-        </div>
-      </div>
-    </div>
-    <!-- Modal: Notification for when someone wants to contact you -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-      <div class="modal-dialog font-color" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title font-color">Match</h4>
+        <!-- Uploading options: videos -->
+        <div class="col-xs-12 col-lg-12 container-button">
+          <div class="col-xs-6 col-md-6">
+            <a id="button-videos" class="btn btn-default buttons center-block " href="#" role="button">Videos</a>
           </div>
-          <div class="modal-body">
-            <p class="text-center">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?, si es así,
-              <a class="text-center" href="../views/chat.html">Click aquí</a>
-              sino, puedes rechazarla en la opción 'Reject Request'! ¡Qué la aventura te acompañe!
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
+          <!-- Uploading options: Images -->
+          <div class="col-xs-6 col-md-6">
+            <a id="button-images" class="btn btn-default buttons center-block" href="#" role="button">Imagenes</a>
           </div>
         </div>
-        <!-- /.modal-content -->
       </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-    <!-- Modal for day -->
-    <div class="modal fade" id="modalDay" tabindex="-1" role="dialog" aria-labelledby="modalSignUp">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content background-modal-singUp center-block">
-          <div class="modal-body background-modal-singUp-body ">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <form>
-              <div class="form-group row">
-                <div class="col-xs-12">
-                  <button class="col-xs-12 btn btn-info button-cloud-upload" type="submit">GO UP</button>
+      <br>
+      <!-- "like" Option -->
+      <div class="container col-xs-12 col-lg-12">
+        <div class="row">
+          <div id="icon-like" class="col thumbs-container">
+            <span class="glyphicon glyphicon-thumbs-up thumbs center-block" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Modal: Notification for when someone wants to contact you -->
+      <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog font-color" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title font-color">Match</h4>
+            </div>
+            <div class="modal-body">
+              <p class="text-center color">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?, si es así,
+                <a class="text-center" href="../views/chat.html">Click aquí</a>
+                sino, puedes rechazarla en la opción 'Reject Request'! ¡Qué la aventura te acompañe!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      <!-- Modal for day -->
+      <div class="modal fade" id="modalDay" tabindex="-1" role="dialog" aria-labelledby="modalDay">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content background-modal-singUp center-block">
+            <div class="modal-body background-modal-singUp-body ">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <form>
+                <div class="form-group row">
+                  <div class="col-xs-12">
+                    <h3 class="color">Sube tus experiencias del día</h3>
+                    <button class="col-xs-12 btn btn-info button-cloud-upload" type="submit">GO UP</button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Import jQuery and Bootstrap.js -->
-    <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/plays.js"></script>
-    <script type="text/javascript" src="../js/data-base.js"></script>
+      <!-- Import jQuery and Bootstrap.js -->
+      <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../js/plays.js"></script>
+      <script type="text/javascript" src="../js/data-base.js"></script>
 </body>
 
 </html>

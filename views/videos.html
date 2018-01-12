@@ -21,10 +21,25 @@
     <!-- Title -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 container-header">
-          <div class="col-xs-12 container-header-title">
-            <h4>Jugadas del dia</h4>
-          </div>
+        <!-- menu Header navbar -->
+        <div class="col-xs-12 col-md-12 container-header container-header-title">
+          <nav class="navbar navbar-inverse navbar-fixed-top modify">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle color-grey-white" data-toggle="collapse" data-target="#myNavbar">
+                <span class="color-grey icon-bar"></span>
+                <span class="color-grey icon-bar"></span>
+                <span class="color-grey icon-bar"></span>
+              </button>
+              <h4 class="text-center col-sm-8 col-md-8">Jugadas del dia</h4>
+            </div>
+            <div class="collapse navbar-collapse clearfix hamburger-nav" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="../views/start.html" class="text-rigth container-close">Close</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
       <hr>
@@ -54,7 +69,7 @@
       <div class="row">
         <div class="col-xs-12 container-header">
           <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="#">
+            <a href="../views/newsfeed.html">
               <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
             </a>
           </div>
@@ -63,7 +78,7 @@
               <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
             </a>
           </div>
-          <div class="col-xs-4  col-md-4 container-button-icon">
+          <div class="col-xs-4  col-md-4 container-button-icon" data-toggle="modal" data-target="#myModal">
             <a href="#">
               <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
             </a>
@@ -72,61 +87,87 @@
       </div>
       <hr>
     </div>
-  </nav>
-  <!-- Section Container Videos -->
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
+    </nav>
+    <!-- Section Container Videos -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
           <div class="col-xs-12">
-            <div class="container-input">
-              <div class="col-xs-12 container-button-next">
-                <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-cloud-upload">
-                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                </button>
+            <div class="col-xs-12">
+              <div class="container-input">
+                <div class="col-xs-12 container-button-next">
+                  <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-cloud-upload">
+                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="container-video">
-              <h4 class="title-video">Hola</h4>
-              <iframe class="video" src="https://www.youtube.com/embed/OXslVqL2D1E" frameborder="0" gesture="media" allow="encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-            <div class="container-video">
-              <h4 class="title-video">Hola</h4>
-              <iframe class="video" src="https://www.youtube.com/embed/QERCdrmIfSU" frameborder="0" gesture="media" allow="encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-            <div class="container-video">
-              <h4 class="title-video">Hola</h4>
-              <iframe class="video" src="https://www.youtube.com/embed/f6egvBiSqsw" frameborder="0" gesture="media" allow="encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-            <div class="container-video">
-              <h4 class="title-video">Hola</h4>
-              <iframe class="video" src="https://www.youtube.com/embed/dSiJ_BmXMVE" frameborder="0" gesture="media" allow="encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-            <div class="container-video">
-              <h4 class="title-video">Hola</h4>
-              <iframe class="video" src="https://www.youtube.com/embed/W9sMAahADRs" frameborder="0" gesture="media" allow="encrypted-media"
-                allowfullscreen></iframe>
+              <div class="container-video">
+                <h4 class="title-video">Fifa 4</h4>
+                <iframe class="video" src="https://www.youtube.com/embed/OXslVqL2D1E" frameborder="0" gesture="media" allow="encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="container-video">
+                <h4 class="title-video">League of Legends</h4>
+                <iframe class="video" src="https://www.youtube.com/embed/QERCdrmIfSU" frameborder="0" gesture="media" allow="encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="container-video">
+                <h4 class="title-video">Dota 2</h4>
+                <iframe class="video" src="https://www.youtube.com/embed/f6egvBiSqsw" frameborder="0" gesture="media" allow="encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="container-video">
+                <h4 class="title-video">Clash of Clans</h4>
+                <iframe class="video" src="https://www.youtube.com/embed/dSiJ_BmXMVE" frameborder="0" gesture="media" allow="encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="container-video">
+                <h4 class="title-video">10 jugadas epicas de League of Legends</h4>
+                <iframe class="video" src="https://www.youtube.com/embed/W9sMAahADRs" frameborder="0" gesture="media" allow="encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <!-- Modal: Notification for when someone wants to contact you -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog font-color" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title font-color">Match</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-center color">Alguien te ha hecho un Match! ¿Deseas aceptar esta pequeña aventura?, si es así,
+              <a class="text-center" href="../views/chat.html">Click aquí</a>
+              sino, puedes rechazarla en la opción 'Reject Request'! ¡Qué la aventura te acompañe!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Reject Quest</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
     </div>
-  </section>
-   <!-- Modal for day -->
-   <div class="modal fade" id="modalDay" tabindex="-1" role="dialog" aria-labelledby="modalDay">
+    <!-- /.modal -->
+    <!-- Modal for day -->
+    <div class="modal fade" id="modalDay" tabindex="-1" role="dialog" aria-labelledby="modalDay">
       <div class="modal-dialog" role="document">
         <div class="modal-content background-modal-singUp center-block">
           <div class="modal-body background-modal-singUp-body ">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span class="color" aria-hidden="true">&times;</span>
             </button>
             <form>
               <div class="form-group row">
                 <div class="col-xs-12">
+                  <h3 class="color">Sube tus experiencias del día</h3>
                   <button class="col-xs-12 btn btn-info button-cloud-upload" type="submit">GO UP</button>
                 </div>
               </div>
@@ -134,10 +175,11 @@
           </div>
         </div>
       </div>
-  <!-- Import jQuery and Bootstrap.js -->
-  <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/videos.js"></script>
+    </div>
+      <!-- Import jQuery and Bootstrap.js -->
+      <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../js/videos.js"></script>
 </body>
 
 </html>
