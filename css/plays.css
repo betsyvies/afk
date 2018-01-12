@@ -92,7 +92,7 @@ hr {
   margin-left: 3.5em;
 }
 
-  /*Estilos Imagen - videos*/
+/*Estilos Imagen - videos*/
 
 .profile {
   height: 18em;
@@ -100,7 +100,12 @@ hr {
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
+}
+
+.container-info-user {
+  display: flex;
+  justify-content: center;
 }
 
 .updates {
@@ -117,17 +122,18 @@ display: inline;
 }
 
 /* video/image button style */
+
 .buttons{
   background: linear-gradient(145deg, #0f0f0f , #1a2421, #1c352d);
   color: white;
 }
-
 
 .thumbs-container {
   padding-bottom: 25px;
 }
 
 /* "Like" button/option*/
+
 .thumbs{
   display: flex;
   justify-content: center;
@@ -192,5 +198,9 @@ display: inline;
   border: none;
   background-color: #173430;
   margin-top: 2rem;
+}
+
+@media (min-width:992px) {
+
 }
 

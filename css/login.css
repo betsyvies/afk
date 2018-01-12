@@ -5,6 +5,14 @@
   padding: 0;
 }
 
+.red{
+  color: rgb(253, 0, 2);
+}
+
+.space {
+  margin-top: 1em;
+}
+
 body {
   background-image: url(../assets/images/group.png);
   background-size: 100vw 100vh;
@@ -15,14 +23,37 @@ body {
 }
 
 /* Styles for container */
+
 h1 {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   color:white;
 }
 
+hr {
+  margin-top: 0;
+  height: 1px;
+  width: 50%;
+  background-color: rgb(253, 0, 2);
+  border: 1px solid rgb(253, 0, 2);
+}
+
 .help-block {
   color:white;
+}
+
+/* Style for form */
+
+form {
+  border: 2px solid rgb(253, 0, 2);
+  border-radius: 5px;
+  padding: 2em 2em;
+}
+
+/* Style for button*/
+
+.container-button-next {
+  margin-top: 2rem;
 }
 
 .button-next {
@@ -30,19 +61,28 @@ h1 {
 }
 
 .button-next {
-  background-color: transparent;
-  border: 1px solid white;
-  outline: none;
-  color: #fff;
+  background: #fff;
+  color: rgb(253, 0, 2);
+  margin-bottom: 1em;
   padding: 1rem 2rem;
-  margin-bottom: 2rem;
 }
 
 .transparent {
   background: transparent;
   color: #fff;
 }
-  
+
+/* Estilo de focus de los inputs */
+
+.focus-input {
+  border-color: rgb(253, 0, 2);
+  border-color:rgb(253, 0, 2, 0.8);
+  outline: 0;
+  outline: thin dotted\9;
+  -webkit-box-shadow: 0 0 8px rgb(253, 0, 2, 0.6);
+  box-shadow: 0 0 8px rgb(253, 0, 2, 0.6);
+}
+
 /* Style for placeholder */
   
 .transparent::placeholder { 

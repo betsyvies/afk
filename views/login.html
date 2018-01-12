@@ -17,19 +17,26 @@
 <body>
   <!-- Title-->
   <div class="container-fluid">
-    <h1>Always For Komrads</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="red">Always For Komrads</h1>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 col-sm-offset-4 col-lg-offset-4">
+        <hr class="col-lg-offset-3 col-sm-offset-3  col-xs-offset-3 space yellow">
+      </div>
+    </div>
   </div>
   <br>
   <!-- User login in to its account -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12">
-        <form>
+      <div class="col-xs-12 col-sm-4 col-lg-4 col-sm-offset-4 col-lg-offset-4">
+        <form class="space">
           <div class="form-group text-center">
-            <input id="inputEmail" type="text" class="form-control transparent" name="email" placeholder="Email">
+            <input id="inputEmail" type="text" class="form-control transparent focus-input" name="email" placeholder="Email">
           </div>
           <div class="form-group text-center">
-            <input id="inputPassword" type="password" class="form-control transparent" placeholder="Password">
+            <input id="inputPassword" type="password" class="form-control transparent focus-input" placeholder="Password">
           </div>
           <div class="form-group" data-toggle="modal" data-target="#myModal">
             <p class="help-block text-center">If you have forgotten your password
@@ -37,13 +44,13 @@
             </p>
           </div>
           <br>
-          <div class="col-xs-12 container-button-next">
-            <button id="access" type="button" class="btn btn-default btn-lg btn-block button-next">Access</button>
-          </div>
-          <div class="col-xs-12 container-button-next">
-            <button type="button" class="btn btn-default btn-lg btn-block button-next" data-toggle="modal" data-target="#modalSignUp">Sing In</button>
-          </div>
         </form>
+        <div class="col-xs-12 col-sm-8 col-lg-8 col-sm-offset-2 col-lg-offset-2 container-button-next">
+          <button id="access" type="button" class="btn btn-default btn-lg btn-block button-next">Access</button>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-lg-8 col-sm-offset-2 col-lg-offset-2 container-button-next">
+          <button type="button" class="btn btn-default btn-lg btn-block button-next" data-toggle="modal" data-target="#modalSignUp">Sing In</button>
+        </div>
       </div>
     </div>
   </div>
