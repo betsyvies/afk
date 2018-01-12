@@ -112,15 +112,11 @@ ___
 
 ![AFK_NF](assets/readMe/8-nf.png)
 
-8. Vista Notifications:
-
-![AFK_Not](assets/readMe/9-not.png)
-
-9. Vista Contacts:
+8. Vista Contacts:
 
 ![AFK_Con.](assets/readMe/10-cont.png)
 
-10. Vista Chat:
+9. Vista Chat:
 
   - Parte I:
 
