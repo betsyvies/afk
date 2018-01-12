@@ -80,61 +80,61 @@ ___
 
 1. Vista Splash:
 
-![AFK_Splash](assets/images/readme/1.png)
+![AFK_Splash](assets/readme/1.png)
 
 2. Vista Start:
 
-![AFK_Start](assets/images/readme/2.png)
+![AFK_Start](assets/readme/2.png)
 
 3. Vista Sign-Up:
 
-![AFK_SignUp](assets/images/readme/3.png)
+![AFK_SignUp](assets/readme/3.png)
 
 4. Vista Log-In:
 
-![AFK_LogIn](assets/images/readme/4.png)
+![AFK_LogIn](assets/readme/4.png)
 
   - Vista Log-In Alert:
 
-![AFK_LogInAlert](assets/images/readme/4.1.png)
+![AFK_LogInAlert](assets/readme/4.1.png)
 
 5. Vista Categories:
 
-![AFK_Cat.](assets/images/readme/5.png)
+![AFK_Cat.](assets/readme/5.png)
 
 6. Vista profile:
 
-![AFK_prof](assets/images/readme/6.png)
+![AFK_prof](assets/readme/6.png)
 
   - Opción Imagenes:
 
-![AFK_prof](assets/images/readme/6-im.png)
+![AFK_prof](assets/readme/6-im.png)
 
   - Opción Videos:
   
-![AFK_prof](assets/images/readme/7-vid.png)
+![AFK_prof](assets/readme/7-vid.png)
 
 7. Vista NewsFeed:
 
-![AFK_NF](assets/images/readme/8-nf.png)
+![AFK_NF](assets/readme/8-nf.png)
 
 8. Vista Notifications:
 
-![AFK_Not](assets/images/readme/9-not.png)
+![AFK_Not](assets/readme/9-not.png)
 
 9. Vista Contacts:
 
-![AFK_Con.](assets/images/readme/10-cont.png)
+![AFK_Con.](assets/readme/10-cont.png)
 
 10. Vista Chat:
 
   - Parte I:
 
-![chat](assets/images/readme/11.png)
+![chat](assets/readme/11.png)
 
   - Parte II:
 
-![AFK_Chat 2](assets/images/readme/11.1-chat.png)
+![AFK_Chat 2](assets/readme/11.1-chat.png)
 
 
 
