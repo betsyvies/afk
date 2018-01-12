@@ -130,11 +130,11 @@ ___
 
   - Parte I:
 
-![AFK_Con.](../assets/readme/11.png)
+![chat](../assets/readme/11.png)
 
   - Parte II:
 
-![AFK_Con.](../assets/readme/11.1-chat.png)
+![AFK_Chat 2](assets/readme/11.1-chat.png)
 
 
 
