@@ -124,17 +124,17 @@ ___
 
 9. Vista Contacts:
 
-![AFK_Con.](./assets/readme/10-cont.png)
+![AFK_Con.](./assets/images/readme/10-cont.png)
 
 10. Vista Chat:
 
   - Parte I:
 
-![chat](assets/readme/11.png)
+![chat](assets/images/readme/11.png)
 
   - Parte II:
 
-![AFK_Chat 2](/assets/readme/11.1-chat.png)
+![AFK_Chat 2](/assets/images/readme/11.1-chat.png)
 
 
 
