@@ -57,31 +57,4 @@ ___
 
 - [W3School] : https://www.w3schools.com/bootstrap/bootstrap_forms.asp
 
-## Imagen 
-
-- Vista Splash
-
-![Lyft](assets/images/readme/splash.png)
-
-- Vista Start
-
-![Lyft](assets/images/readme/start.png)
-
-- Vista Phone
-
-![Lyft](assets/images/readme/phone.png)
-
-![Lyft](assets/images/readme/phone1.png)
-
-- Vista Code
-
-![Lyft](assets/images/readme/code.png)
-
-- Vista Info-User
-
-![Lyft](assets/images/readme/info-user.png)
-
-- Vista Completed 
-
-![Lyft](assets/images/readme/completed.png)
 
