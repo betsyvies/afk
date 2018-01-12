@@ -37,7 +37,6 @@ body {
 }
   
 h4 {
-  font-family: 'Press Start 2P', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +46,7 @@ h4 {
 
 .container-close {
   margin-right: 2rem;
+  color: #fff;
 }
 
 .modify {
@@ -182,6 +182,76 @@ display: inline;
   margin-bottom: 1rem;
 }
 
+/* Styles for Container imagenes */
+
+.container-input {
+  width: 100%;
+  display: inline-flex;
+  margin-bottom: 2rem;
+}
+
+.container-images {
+  margin-bottom: 2rem;
+}
+
+.text-img {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.container-button-next {
+  border: none;
+}
+  
+.button-videos{
+  color: #fff;
+  border: none;
+  background-color: #173430;
+}
+
+.container-img {
+  margin-bottom: 2rem;
+}
+
+.title-img {
+  color: #000;
+  text-align: center;
+}
+  
+[alt="jugada"] {
+  width: 100%;
+  height: 20rem; 
+}
+
+/* Styles for Container videos */
+
+.container-input {
+  width: 100%;
+  display: inline-flex;
+}
+
+.container-button-next {
+  border: none;
+}
+  
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
+}
+
+.title-video {
+  color: #000;
+  text-align: center;
+}
+
+.container-video {
+  margin-bottom: 2rem;
+}
+
+.video {
+  width: 100%;
+  height: 20rem; 
+}
+
 /*Modal styles*/
 
 .font-color {
@@ -200,7 +270,4 @@ display: inline;
   margin-top: 2rem;
 }
 
-@media (min-width:992px) {
-
-}
 
