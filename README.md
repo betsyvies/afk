@@ -130,7 +130,7 @@ ___
 
   - Parte I:
 
-![chat](assets/images/readme/11.png)
+![chat](assets/../readme/11.png)
 
   - Parte II:
 
