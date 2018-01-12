@@ -17,7 +17,7 @@ ___
 
 ## UX: 
 
-- Se entrevisto a diferentes Gamers y se les pregunto sus necesidades, el tipo de estilos y colores que mas les atrae para este tipo de plataforma.
+- Se entrevisto a diferentes Gamers y se les pregunto sus necesidades, el tipo de estilos y colores que mas les atrae para este tipo de plataforma.¿ y opiniones en diversos temas
 
 ___
 
