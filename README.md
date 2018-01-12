@@ -134,7 +134,7 @@ ___
 
   - Parte II:
 
-![AFK_Chat 2](assets/readme/11.1-chat.png)
+![AFK_Chat 2](https://github.com/betsyvies/afk/edit/fran-branch/README.md/assets/readme/11.1-chat.png)
 
 
 
