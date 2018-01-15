@@ -111,6 +111,7 @@ hr {
 
 .container-video {
   margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .video {
@@ -135,4 +136,5 @@ hr {
   border: none;
   background-color: #173430;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }

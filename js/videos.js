@@ -21,7 +21,7 @@ function previewFile() {
   
 $(document).ready(function() {
   $video = $('#video');
-  $buttonVideo = $('button-icon-video');
+  $buttonVideo = $('#button-icon-video');
   $titleVideoView = $('#title-video-view');
   
   /* Hacemos uso de la data attrSrc, para guardar la imagen  */
@@ -43,5 +43,5 @@ $(document).ready(function() {
   /* Hacemos uso de la data title */
   var titleValidation = window.localStorage.getItem('title');
   
-  $titleImageView.text(titleValidation);
+  $titleVideoView.text(titleValidation);
 });

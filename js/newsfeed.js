@@ -13,17 +13,15 @@ $(document).ready(function() {
     localStorage.setItem('publication', publication);
     localStorage.setItem('hour', hour);
 
-    var containerComments = $containerComment.append('<div class="col-xs-12 container-user2">' +
+    $containerComment.append('<div class="col-xs-12 container-user2">' +
       '<div id="container-icon-user" class="col-xs-3 container-user">' +
       '<i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>' +
       '</div>' +
       '<div id="container-publication" class="col-xs-9 container-user">' +
-      '<p id="publication-day" class="text">' + publicationValidation + '</p>' +
-      '<p class="text">' + hourValidation + '</p>' + '<p class="text">' + nameValidation + '</p>' +
+      '<p id="publication-day" class="text">' + publication + '</p>' +
+      '<p class="text">' + hour + '</p>' + '<p class="text">' + name + '</p>' +
       '</div>' +
       '</div>');
-
-    localStorage.setItem('containerComments', containerComments);
 
     $comment.val('');
   });
@@ -43,10 +41,6 @@ $(document).ready(function() {
       '</div>' +
       '</div>');
 });
-
-/* Hacemos uso de la data, para publicar */
-var publicationValidation = window.localStorage.getItem('publication');
-var hourValidation = window.localStorage.getItem('hour');
 
 // chat code
 
