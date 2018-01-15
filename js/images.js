@@ -23,23 +23,29 @@ function previewFile() {
 
 $(document).ready(function() {
   $image = $('#image');
-  $buttonImage = $('button-icon-image');
+  $inputImage = $('#input-title-image');
+  $buttonImage = $('#button-icon-image');
   $titleImageView = $('#title-image-view');
 
   /* Hacemos uso de la data attrSrc, para guardar la imagen  */
   var attrSrcValidation = window.localStorage.getItem('attrSrc');
   $image.attr('src', attrSrcValidation);
 
-  $buttonImage.on('click', function() {
-    $inputImage = $('#input-title-image');
-    $titleImageView = $('#title-image-view');
+  /* Este evento sirve para cambiar la frase al gusto de el */
+  $inputImage.on('keyup', function() {
+    event.preventDefault();
+    var title = $(this).val();
+    $titleImageView.attr('data-title', title);
 
-    var title = $inputImage.val();
-
-    $titleImageView.text(title);
-  
     /* Guardamos el title en la base local */
     localStorage.setItem('title', title);
+  });
+  
+  $buttonImage.on('click', function() {
+    var dataTitle = $titleImageView.attr('data-title');
+  
+    $titleImageView.text(dataTitle);
+    $inputImage.val('');
   });
 
   /* Hacemos uso de la data title */
