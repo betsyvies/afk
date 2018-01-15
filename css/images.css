@@ -81,6 +81,17 @@ div .circle{
   background-color: #173430;
 }
 
+.container-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-two {
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
 hr {
   margin-top: 0;
   margin-bottom: 0;
@@ -107,6 +118,7 @@ hr {
 .container-img {
   margin-top: 6rem;
   margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .title-img {
@@ -120,7 +132,12 @@ hr {
 }
 
 /* Modal for images*/
-	
+  
+.center {
+  display: flex;
+ justify-content: center;
+}
+
 .file-input {
   visibility: hidden;
   width: 0;
@@ -133,7 +150,7 @@ hr {
   background: -webkit-linear-gradient(top, #173430, #000);
   border: 1px solid #000;
   border-radius: 3px;
-  padding: 5px 170px;
+  padding: 5px 60px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;

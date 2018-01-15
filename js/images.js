@@ -1,8 +1,6 @@
 function previewFile() {
-  // debugger;
   var preview = document.querySelector('img');
   var file = document.querySelector('input[type=file]').files[0];
-  console.log(file);
   var reader = new FileReader();
 
   reader.onloadend = function() {
@@ -23,7 +21,6 @@ function previewFile() {
 
 $(document).ready(function() {
   $image = $('#image');
-  $inputImage = $('#input-title-image');
   $buttonImage = $('#button-icon-image');
   $titleImageView = $('#title-image-view');
 

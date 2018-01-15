@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $buttonGame = $('#button-game');
+  $containerComment = $('#container-comment');
 
   $buttonGame.on('click', function() {
     $containerComment = $('#container-comment');
@@ -12,27 +13,34 @@ $(document).ready(function() {
     localStorage.setItem('publication', publication);
     localStorage.setItem('hour', hour);
 
-    /* Hacemos uso de la data, para publicar */
-    var publicationValidation = window.localStorage.getItem('publication');
-    var hourValidation = window.localStorage.getItem('hour');
-
-    $containerComment.append('<div class="col-xs-12 container-user">' +
+    $containerComment.append('<div class="col-xs-12 container-user2">' +
       '<div id="container-icon-user" class="col-xs-3 container-user">' +
       '<i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>' +
       '</div>' +
       '<div id="container-publication" class="col-xs-9 container-user">' +
-      '<p id="publication-day" class="text">' + publicationValidation + '</p>' +
-      '<p class="text">' + hourValidation + '</p>' +
+      '<p id="publication-day" class="text">' + publication + '</p>' +
+      '<p class="text">' + hour + '</p>' + '<p class="text">' + name + '</p>' +
       '</div>' +
       '</div>');
 
     $comment.val('');
   });
-});
+  /* Hacemos uso de la data, para publicar */
+  var publicationValidation = window.localStorage.getItem('publication');
+  var hourValidation = window.localStorage.getItem('hour');
+  
+  var nameValidation = window.localStorage.getItem('name');
 
-/* Hacemos uso de la data, para publicar */
-var publicationValidation = window.localStorage.getItem('publication');
-var hourValidation = window.localStorage.getItem('hour');
+  $containerComment.append('<div class="col-xs-12 container-user2">' +
+      '<div id="container-icon-user" class="col-xs-3 container-user">' +
+      '<i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>' +
+      '</div>' +
+      '<div id="container-publication" class="col-xs-9 container-user">' +
+      '<p id="publication-day" class="text">' + publicationValidation + '</p>' +
+      '<p class="text">' + hourValidation + '</p>' + '<p class="text">' + nameValidation + '</p>' +
+      '</div>' +
+      '</div>');
+});
 
 // chat code
 

@@ -17,6 +17,10 @@ $(document).ready(function() {
     event.preventDefault();
     var phrase = $(this).val();
     $containerPhrase.attr('data-phrase', phrase);
+
+    /* Guardamos la phrase en la base local */
+
+    localStorage.setItem('phrase', phrase);
   });
 
   $buttonIcon.on('click', function() {
@@ -25,6 +29,11 @@ $(document).ready(function() {
     $spanPhrase.text(dataPhrase);
     $inputPhrase.val('');
   });
+
+  /* Hacemos uso de la data title */
+  var phraseValidation = window.localStorage.getItem('phrase');
+
+  $spanPhrase.text(phraseValidation);
 
   $buttonVideos.on('click', function() {
     window.location.assign('videos.html');
