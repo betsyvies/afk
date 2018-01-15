@@ -12,6 +12,9 @@
 .yellow {
   color: rgb(255, 217, 0);
 }
+.yellow:hover {
+text-decoration: none;
+}
 
 .space {
   margin-top: 1em;
@@ -107,6 +110,17 @@ color: #fff;
   background: #fff;
   color: rgb(255, 217, 0);
   margin-bottom: 1em;
+}
+
+/* modal */
+
+.color-texts {
+  color: #00693e!important;
+}
+
+.color-text-2{
+  color: white;
+  text-decoration: none;
 }
 
 

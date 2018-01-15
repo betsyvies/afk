@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-xs-1 container-button">
           <button id="redirector-button" type="button" class="btn btn-default button transparent" aria-label="Left Align">
-            <span class="glyphicon glyphicon-menu-left yellow" aria-hidden="true"></span>
+            <a href="../views/start.html" class="glyphicon glyphicon-menu-left yellow" aria-hidden="true"></a>
           </button>
         </div>
         <div class="col-xs-10">
@@ -42,7 +42,7 @@
         <div class="col-xs-12 col-sm-4 col-lg-4 col-sm-offset-4 col-lg-offset-4">
           <form class="space">
             <div class="form-group container-input">
-              <label for="inputEmail">User Name</label>
+              <label for="inputEmail">Name</label>
               <input id="name" type="text" class="form-control transparent focus-input" name="name" placeholder="Ejm: José">
             </div>
             <div class="form-group container-input">
@@ -66,7 +66,7 @@
               </select>
             </div>
           </form>
-          <div class="checkbox container-checkbox">
+          <div class="checkbox container-checkbox" data-toggle="modal" data-target="#myModal">
             <label class="label-checkbox">
               <input id="checkbox" class="input-checkbox focus-input" type="checkbox" value=""> I agree to AFK's
               <a href="#">Terms of Service</a>
@@ -79,6 +79,35 @@
       </div>
     </div>
   </section>
+  <!--Modal/Pop-UP-->
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title color-texts">Terminos y condiciones</h4>
+        </div>
+        <div class="modal-body ">
+          <p class="color-texts">LEA EL SIGUIENTE ACUERDO DE LICENCIA DE USUARIO FINAL ("ACUERDO") ANTES DE INSTALAR DUNGEON SIEGE, (EL "SOFTWARE DE JUEGO"). AL INSTALAR, COPIAR Y / O DE OTRA MANERA USAR EL SOFTWARE DE JUEGO, ACEPTA LOS TÉRMINOS DE ESTE ACUERDO CONFORME ESTABLECIDO POR AFKgamingCorporation, INC., UBICADO EN 999 N. SEPULVEDA BLVD., 3 ° PISO, EL SEGUNDO, CA 90245 Y SUS COMPAÑÍAS AFILIADAS.
+            
+            SU USO DEL SOFTWARE DE JUEGO TAMBIÉN ESTÁ SUJETO A LOS TÉRMINOS Y CONDICIONES ESTABLECIDOS EN EL ACUERDO DE SUSCRIPCIÓN DE AFK ™ Y / O CUALQUIER OTRO TÉRMINO ESTABLECIDO POR VALVE CORPORATION EN RELACIÓN CON EL SERVICIO DE AFK.
+            
+            SI ACEPTA LOS TÉRMINOS ESTABLECIDOS EN ESTE ACUERDO, seleccione "ACEPTO" para instalar el Software del juego e indicar su aceptación de estos términos y su comprensión de las condiciones de uso del Software del juego.
+            
+            SI NO ESTÁ DE ACUERDO CON LOS TÉRMINOS ESTABLECIDOS EN ESTE ACUERDO, seleccione "NO ACEPTO" y no se le otorgará la Licencia (definida a continuación) para el Software del juego.
+            
+            LICENCIA DE USO LIMITADO
+            
+            El término "Software de juego" incluye el software incluido en este videojuego, los medios asociados, cualquier software asociado con el modo en línea del videojuego (sujeto a cualquier término de uso adicional aplicable a dicho modo en línea), cualquier material impreso, manuales , cualquier documentación en línea o electrónica, y todas y cada una de las copias de dicho software y materiales. AFKgamingCorporation le concede el derecho y la licencia no exclusivos, intransferibles y limitados para instalar y usar una (1) copia del Software del juego en un (1) disco duro de la computadora en un momento dado únicamente para su uso personal (el "Licencia"). Todos los derechos no específicamente otorgados bajo esta Licencia son reservados por AFKgamingCorporatio y, según corresponda, por sus licenciantes. El Software del juego tiene licencia para usted, no se vende. Esta Licencia no le otorga ningún título o propiedad en el Software del juego, y no debe interpretarse como una venta o transferencia de propiedad intelectual u otros derechos sobre el Software del juego.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Acepto T&M</button>
+          <button type="button" class="btn btn-primary"><a class="color-text-2" href="../views/start.html">No acepto T&M</a></button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <!-- Import jQuery and Bootstrap.js -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
