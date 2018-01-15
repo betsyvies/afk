@@ -87,6 +87,13 @@ hr {
   margin-bottom: 0;
 }
 
+/* Container User Style  */
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #013220!important;
+}
+
 /* Styles for Container notifications */
   
 .container-input {
@@ -99,6 +106,12 @@ margin-bottom: 2rem;
 
 .container-user {
   margin-bottom: 1rem;
+}
+
+.container-user2 {
+  border: 2px solid #1a2421;
+  margin: 0.5em;
+  border-radius: 0.5em;
 }
 
 .user-icon {
