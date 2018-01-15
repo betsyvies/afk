@@ -131,7 +131,12 @@ hr {
 }
 
 /* Modal for images*/
-	
+  
+.center {
+  display: flex;
+ justify-content: center;
+}
+
 .file-input {
   visibility: hidden;
   width: 0;
@@ -144,7 +149,7 @@ hr {
   background: -webkit-linear-gradient(top, #173430, #000);
   border: 1px solid #000;
   border-radius: 3px;
-  padding: 5px 170px;
+  padding: 5px 60px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
