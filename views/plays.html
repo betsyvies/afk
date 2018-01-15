@@ -172,14 +172,28 @@
                 <h4 class="color text-img">Sube tus mejores fotos</h4>
               </div>
               <div class="col-xs-4 container-button-next">
-                <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-videos">
+                <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-videos" data-toggle="modal" data-target="#modalImage">
                   <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                 </button>
               </div>
             </div>
+            <div class="col-xs-12">
+              <div class="form-group row">
+                <div class="col-xs-4">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button id="button-icon-image" class="btn btn-default" type="button">
+                        <i class="fa fa-pencil icon-pencil color" aria-hidden="true"></i>
+                      </button>
+                    </span>
+                    <input id="input-title-image" type="text" class="form-control" placeholder="Title Image">
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-sm-12 col-lg-12 container-images">
               <div class="container-img col-sm-4 col-lg-4">
-                <h4 class="title-img">Rediseño reciente de Kassadin</h4>
+                <h4 id="title-image-view" class="title-img">Rediseño reciente de Kassadin</h4>
                 <img src="../assets/images/view-img/jugada1.jpg" alt="jugada">
               </div>
               <div class="container-img col-sm-4 col-lg-4">
@@ -204,6 +218,28 @@
       </div>
     </div>
   </section>
+  <!-- Modal for Image -->
+  <div class="modal fade" id="modalImage" tabindex="-1" role="dialog" aria-labelledby="modalImage">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content background-modal-singUp center-block">
+        <div class="modal-body background-modal-singUp-body ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="color" aria-hidden="true">&times;</span>
+          </button>
+          <form>
+            <div class="form-group row">
+              <div class="col-xs-12">
+                <h4 class="color">¡Sube tus mejores images!</h4>
+              </div>
+              <div class="col-xs-6 center">
+                <input type="file" accept="image/*" class="file-input" onchange="previewFile()">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Section Container Videos -->
   <section class="visible-md-block visible-lg-block">
     <div class="container-fluid">
@@ -215,7 +251,7 @@
                 <h4 class="color text-img">Sube tus mejores videos</h4>
               </div>
               <div class="col-xs-4 container-button-next">
-                <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-videos">
+                <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-videos" data-toggle="modal" data-target="#modalVideo">
                   <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                 </button>
               </div>
@@ -252,6 +288,28 @@
       </div>
     </div>
   </section>
+  <!-- Modal for Video -->
+  <div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="modalVideo">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content background-modal-singUp center-block">
+        <div class="modal-body background-modal-singUp-body ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="color" aria-hidden="true">&times;</span>
+          </button>
+          <form>
+            <div class="form-group row">
+              <div class="col-xs-12">
+                <h4 class="color">¡Sube tus mejores videos!</h4>
+              </div>
+              <div class="col-xs-6 center">
+                <input type="file" accept="image/*" class="file-input" onchange="previewFile()">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Modal: Notification for when someone wants to contact you -->
   <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog font-color" role="document">
@@ -430,6 +488,8 @@
   <!-- Import jQuery and Bootstrap.js -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/images.js"></script>
+  <script type="text/javascript" src="../js/videos.js"></script>
   <script type="text/javascript" src="../js/plays.js"></script>
   <script type="text/javascript" src="../js/data-base.js"></script>
 </body>
