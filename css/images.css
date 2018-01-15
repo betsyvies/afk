@@ -81,6 +81,17 @@ div .circle{
   background-color: #173430;
 }
 
+.container-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-two {
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
 hr {
   margin-top: 0;
   margin-bottom: 0;
