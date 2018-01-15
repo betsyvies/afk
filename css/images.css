@@ -71,15 +71,14 @@ div .circle{
   border-radius: 100%;
 }
 
-.container-button-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container-button-next {
+  border: none;
+  margin-top: 2rem;
 }
-
-.icon-two {
-  font-size: 2.5em;
-  text-decoration: none;
+  
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
 }
 
 hr {
@@ -117,6 +116,38 @@ hr {
 [alt="jugada"] {
   width: 100%;
   height: 20rem; 
+}
+
+/* Modal for images*/
+	
+.file-input {
+  visibility: hidden;
+  width: 0;
+  position: relative;
+}
+
+.file-input::before {
+  content: '\f0ee';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #173430, #000);
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 5px 170px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-family: FontAwesome;
+  visibility: visible;
+  position: absolute;
+}
+
+.file-input:hover::before {
+  border-color: #000;
+}
+
+.file-input:active::before {
+  background: -webkit-linear-gradient(top, #173430, #000);
 }
 
 /* Modal styles */

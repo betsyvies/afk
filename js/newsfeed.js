@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $buttonGame = $('#button-game');
 
-  $buttonGame.on('click', function () {
+  $buttonGame.on('click', function() {
     $containerComment = $('#container-comment');
     $comment = $('#comment');
 
@@ -30,9 +30,13 @@ $(document).ready(function () {
   });
 });
 
-//chat code
+/* Hacemos uso de la data, para publicar */
+var publicationValidation = window.localStorage.getItem('publication');
+var hourValidation = window.localStorage.getItem('hour');
 
-$(document).on('click', '.panel-heading span.icon_minim', function (e) {
+// chat code
+
+$(document).on('click', '.panel-heading span.icon_minim', function(e) {
   var $this = $(this);
   if (!$this.hasClass('panel-collapsed')) {
     $this.parents('.panel').find('.panel-body').slideUp();
@@ -44,7 +48,8 @@ $(document).on('click', '.panel-heading span.icon_minim', function (e) {
     $this.removeClass('glyphicon-plus').addClass('glyphicon-minus');
   }
 });
-$(document).on('focus', '.panel-footer input.chat_input', function (e) {
+
+$(document).on('focus', '.panel-footer input.chat_input', function(e) {
   var $this = $(this);
   if ($('#minim_chat_window').hasClass('panel-collapsed')) {
     $this.parents('.panel').find('.panel-body').slideDown();
@@ -52,26 +57,27 @@ $(document).on('focus', '.panel-footer input.chat_input', function (e) {
     $('#minim_chat_window').removeClass('glyphicon-plus').addClass('glyphicon-minus');
   }
 });
-$(document).on('click', '#new_chat', function (e) {
-  var size = $(".chat-window:last-child").css("margin-left");
+
+$(document).on('click', '#new_chat', function(e) {
+  var size = $('.chat-window:last-child').css('margin-left');
   size_total = parseInt(size) + 400;
   alert(size_total);
-  var clone = $("#chat_window_1").clone().appendTo(".container");
-  clone.css("margin-left", size_total);
+  var clone = $('#chat_window_1').clone().appendTo('.container');
+  clone.css('margin-left', size_total);
 });
-$(document).on('click', '.icon_close', function (e) {
-  //$(this).parent().parent().parent().parent().remove();
-  $("#chatbox").hide();
+$(document).on('click', '.icon_close', function(e) {
+  // $(this).parent().parent().parent().parent().remove();
+  $('#chatbox').hide();
 });
 
 // send function start
 
 function send() {
-  var chat = $("#btn-input").val();
+  var chat = $('#btn-input').val();
   var dt = new Date();
-  var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+  var time = dt.getHours() + ':' + dt.getMinutes() + ':' + dt.getSeconds();
 
-  if (chat == "") {
+  if (chat == '') {
     alert('Enter Message');
   } else {
     var body = '<div class="row msg_container base_sent">' +
@@ -86,23 +92,21 @@ function send() {
       '</div>' +
       '</div>';
   }
-  $(body).appendTo("#messagebody");
+  $(body).appendTo('#messagebody');
   $('#btn-input').val('');
-  $("#messagebody").animate({ scrollTop: $("#messagebody")[0].scrollHeight }, 'slow');
+  $('#messagebody').animate({ scrollTop: $('#messagebody')[0].scrollHeight }, 'slow');
 }
 
 
 // send function end
 
 
-
-
-$("#btn-chat").click(function () {
-  send()
+$('#btn-chat').click(function() {
+  send();
 });
 
-$('#btn-input').keypress(function (e) {
+$('#btn-input').keypress(function(e) {
   if (e.which == 13) {
-    send()
+    send();
   }
 });
