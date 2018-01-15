@@ -119,6 +119,43 @@ hr {
   height: 20rem; 
 }
 
+/* Modal for images*/
+
+.center {
+  display: flex;
+ justify-content: center;
+}
+	
+.file-input {
+  visibility: hidden;
+  width: 0;
+  position: relative;
+}
+
+.file-input::before {
+  content: '\f0ee';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #173430, #000);
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 5px 170px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-family: FontAwesome;
+  visibility: visible;
+  position: absolute;
+}
+
+.file-input:hover::before {
+  border-color: #000;
+}
+
+.file-input:active::before {
+  background: -webkit-linear-gradient(top, #173430, #000);
+}
+
 /* Modal styles */
 
 .font-color {
