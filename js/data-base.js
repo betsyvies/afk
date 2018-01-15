@@ -2,19 +2,7 @@
 var user = {
   'gamer1': {
 
-  },
-  'gamer2': {
-
-  },
-  'gamer3': {
-
-  },
-  'gamer4': {
-
-  },
-  'gamer5': {
-
-  },
+  }
 };
 
 var nameValidation = window.localStorage.getItem('name');
@@ -24,10 +12,6 @@ var genderValidation = window.localStorage.getItem('gender');
 var razaValidation = window.localStorage.getItem('raza');
 
 /* Con esta funcion agregamos elementos al objeto user */
-
-for (var i = localStorage.length; i < localStorage.length; i++) {
-  user['gamers' + i] = i;
-}
 
 user['gamer1']['name'] = nameValidation;
 user['gamer1']['email'] = emailValidation;
