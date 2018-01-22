@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <!-- Import Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Import Bootstrap.css-->
+  <!-- Import Bootstrap.css -->
   <link type="text/css" rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
-  <link type="text/css" rel="stylesheet" href="../css/images.css">
+  <link type="text/css" rel="stylesheet" href="../css/allTheUser.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <div class="container-fluid">
       <div class="row">
         <!-- menu Header navbar -->
-        <div class="col-xs-12 col-md-12 container-header container-header-title">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container-header container-header-title">
           <nav class="navbar navbar-inverse navbar-fixed-top modify">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle pull-left color-grey-white" data-toggle="collapse" data-target="#myNavbar">
@@ -37,6 +37,26 @@
                 <li>
                   <a href="../views/start.html" class="text-rigth container-close">Close</a>
                 </li>
+                <li class="visible-md-block visible-lg-block">
+                  <a href="../views/allTheUsers.html">
+                    <span class="glyphicon glyphicon-globe icon-two" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="visible-md-block visible-lg-block">
+                  <a href="../views/newsfeed.html">
+                    <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="visible-md-block visible-lg-block">
+                  <a href="../views/plays.html">
+                    <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="visible-md-block visible-lg-block">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
+                  </a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -44,7 +64,7 @@
       </div>
       <hr>
     </div>
-    <!-- Images / videos subidos por parte de usuarios -->
+    <!-- Images / videos uploaded by users -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12  container-header">
@@ -65,11 +85,11 @@
       <hr>
     </div>
     <!-- Icons  -->
-    <div class="container-fluid">
+    <div class="container-fluid visible-xs-block visible-sm-block">
       <div class="row">
         <div class="col-xs-12 container-header">
           <div class="col-xs-4  col-md-4 container-button-icon">
-            <a href="../views/newsfeed.html">
+            <a href="#">
               <span class="glyphicon glyphicon-modal-window icon-two" aria-hidden="true"></span>
             </a>
           </div>
@@ -78,7 +98,7 @@
               <span class="glyphicon glyphicon-user icon-two" aria-hidden="true"></span>
             </a>
           </div>
-          <div class="col-xs-4 col-md-4 container-button-icon" data-toggle="modal" data-target="#myModal">
+          <div class="col-xs-4  col-md-4 container-button-icon" data-toggle="modal" data-target="#myModal">
             <a href="#">
               <span class="glyphicon glyphicon-bell icon-two" aria-hidden="true"></span>
             </a>
@@ -88,80 +108,18 @@
       <hr>
     </div>
   </nav>
-  <!-- Section Container Images -->
+  <!-- Section Container User -->
   <section>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="col-xs-12">
-            <div class="container-input">
-              <div class="col-xs-12 container-button-next">
-                <button id="submit" type="button" class="btn btn-default btn-lg btn-block button-cloud-upload" data-toggle="modal" data-target="#modalImage">
-                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-            <div class="col-xs-12">
-              <div class="form-group row">
-                <div class="col-xs-12">
-                  <div class="input-group">
-                    <span class="input-group-btn">
-                      <button id="button-icon-image" class="btn btn-default" type="button">
-                        <i class="fa fa-pencil icon-pencil color" aria-hidden="true"></i>
-                      </button>
-                    </span>
-                    <input id="input-title-image" type="text" class="form-control" placeholder="Title Image">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="container-img">
-              <h4 id="title-image-view" class="title-img"></h4>
-              <img id="image" src="" alt="jugada">
-            </div>
-            <div class="container-img">
-              <h4 class="title-img">Gol de Messi </h4>
-              <img src="../assets/images/view-img/jugada2.jpg" alt="jugada">
-            </div>
-            <div class="container-img">
-              <h4 class="title-img">Maestro Yi</h4>
-              <img src="../assets/images/view-img/jugada3.jpg" alt="jugada">
-            </div>
-            <div class="container-img">
-              <h4 class="title-img">Shaco de Ultra Rapid Fire</h4>
-              <img src="../assets/images/view-img/jugada4.jpg" alt="jugada">
-            </div>
-            <div class="container-img">
-              <h4 class="title-img">Construyendo mi aldea</h4>
-              <img src="../assets/images/view-img/jugada5.jpg" alt="jugada">
-            </div>
-          </div>
+      <div class="row background">
+        <div class="col-xs-12 col-md-12 col-sm-12 container-all-gamers">
+          <h2 class="text-center">Gamers</h2>
+        </div>
+        <div id="container-gamers" class="col-xs-12 col-md-12 col-sm-12">
         </div>
       </div>
     </div>
   </section>
-  <!-- Modal for Image -->
-  <div class="modal fade" id="modalImage" tabindex="-1" role="dialog" aria-labelledby="modalImage">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content background-modal-singUp center-block">
-        <div class="modal-body background-modal-singUp-body ">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span class="color" aria-hidden="true">&times;</span>
-          </button>
-          <form>
-            <div class="form-group row">
-              <div class="col-xs-12">
-                <h4 class="color">¡Sube tus mejores images!</h4>
-              </div>
-              <div class="col-xs-6 center">
-                <input type="file" accept="image/*" class="file-input" onchange="previewFile()">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Modal: Notification for when someone wants to contact you -->
   <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog font-color" role="document">
@@ -207,10 +165,14 @@
       </div>
     </div>
   </div>
+
   <!-- Import jQuery and Bootstrap.js -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script type="text/javascript" src="../js/initial-firebase.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/images.js"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="../js/allTheUsers.js"></script>
 </body>
 
 </html>

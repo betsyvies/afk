@@ -1,0 +1,146 @@
+/* Gobal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body { 
+  padding-top: 270px; 
+}
+       
+/* Styles for header */
+
+.container-header {
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  background-color: #0b0e11;
+}
+
+.container-header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-grey-white {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+.container-close {
+  margin-right: 2rem;
+}
+
+.modify {
+  background: transparent;
+  border: 0;
+}
+
+.plus {
+  display: inline-block;
+  color: #fff;
+  font-size: 3em;
+}
+
+div .circle{
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  /* margin-right: 0.2rem; */
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+
+.container-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-two {
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Container User Style  */
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #013220!important;
+}
+
+/* Styles for Container gamers */
+
+.container-all-gamers {
+  margin-bottom: 3rem;
+}
+
+.profile {
+  height: 8em;
+  width:  8em;
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+
+@media (min-width:768px) {
+  .user-name {
+    display: flex;
+    justify-content: left;;
+    align-items: left;
+    color: #000;
+  }
+}
+
+@media (min-width:992px) {
+  .user-name {
+    display: flex;
+    justify-content: left;;
+    align-items: left;
+    color: #000;
+  }
+}
+
+.color {
+  color: #000;
+}
+
+/* Modal day*/ 
+
+.button-cloud-upload {
+  border: none;
+  background-color: #173430;
+  margin-top: 2rem;
+}
+

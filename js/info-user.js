@@ -1,22 +1,9 @@
 function begin() {
-  var $name = $('#name');
   var $email = $('#email');
   var $password = $('#inputPassword');
   var $passwordAgain = $('#inputPasswordAgain');
-  var $checkbox = $('#checkbox');
-  var $gender = $('#sel1');
   var $submit = $('#submit');
-  var $redirectorButton = $('#redirector-button');
-  
-  function isNameValid() {
-  /* Usaremos una expresion regular para validar que escriba bien su nombre */
-    var PATERNNAME = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/ ;
-    var name = $name.val();
-    localStorage.setItem('name', name);
-
-    return PATERNNAME.test($name.val());
-  }
-  
+   
   function isEmailValid() {
     /* Usaremos una expresion regular para validar que escriba bien su correo*/
     var PATERNEMAIL = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
@@ -39,18 +26,8 @@ function begin() {
     }
   }
 
-  function isGenderValid() {
-    /* Si hay valor en el elemento select se muestra true */
-    var gender = $gender.val();
-    localStorage.setItem('gender', gender);
-
-    if ($gender.val()) {
-      return true;
-    }
-  }
-
   function areAllValidationsPassing() {  
-    return isNameValid() && isEmailValid() && isPasswordAgainValid() && isGenderValid();
+    return isEmailValid() && isPasswordAgainValid();
   }
 
   function formStateEvent() {
@@ -61,14 +38,9 @@ function begin() {
     window.location.assign('login.html');
   }
   
-  /* Hacemos focus al input name */
-  $name.focus();
+  /* Hacemos focus al input email */
+  $email.focus();
 
-  $name
-    .focus(isNameValid)
-    .on('keyup', isNameValid)
-    .on('keyup', formStateEvent);
-  
   $email
     .focus(isEmailValid)
     .on('keyup', isEmailValid)
@@ -77,13 +49,7 @@ function begin() {
   $passwordAgain
     .focus(isPasswordAgainValid)
     .on('keyup', isPasswordAgainValid);
-
-  $gender
-    .on('change', isGenderValid);
-    
-  $checkbox
-    .on('click', formStateEvent);
-  
+ 
   $submit
     .on('click', redirectSight);
     

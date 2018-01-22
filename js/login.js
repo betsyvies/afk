@@ -1,59 +1,32 @@
-function begin() {
-  var $access = $('#access'); 
-  var $emailAccess = $('#inputEmail');
-  var $passwordAccess = $('#inputPassword');
+$(document).ready(function() {
+  // Login
+  var $loginBtn = $('#access');
+
+  $loginBtn.on('click', googleLogin);
+
+  function googleLogin() {
+    var provider = new firebase.auth.GoogleAuthProvider();
   
-  function isEmail() {
-    /* Validamos que la contraseña sea la misma*/
-    var emailValidation = window.localStorage.getItem('email');
-    var emailValue = $emailAccess.val();
-    console.log(emailValue);
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // The signed-in user info.
+      var user = result.user;
+      // Mostramos su contenido
+      console.log(user);
+      // Llamamos a la funcion
+      saveData(result.user);
 
-    console.log(emailValidation);
-    if (emailValue === emailValidation) {
-      return true;
-    }
+      window.location.assign('allTheUsers.html');
+    });
   }
 
-  function isPassword() {
-    /* Validamos que la contraseña sea la misma*/
-    var passwordValidation = window.localStorage.getItem('validation');
-    var passwordValue = $passwordAccess.val();
-    if (passwordValue === passwordValidation) {
-      return true;
-    }
+  function saveData(user) {
+    var users = {
+      uid: user.uid,
+      name: user.displayName,
+      email: user.email,
+      photo: user.photoURL
+    };
+    firebase.database().ref('bd/' + user.uid).set(users);
   }
+});
 
-  function areAllValidationsPassing() {  
-    return isEmail() && isPassword();
-  }
-
-  function formStateEvent() {
-    $access.prop('disabled', !areAllValidationsPassing());
-  }
-  
-  function redirectSight() {
-    window.location.assign('plays.html');
-    alert('¡Bienvenido a la red más grande de gamers!');
-  }
-  
-  /* Hacemos focus al input name */
-  $emailAccess.focus();
-
-  $emailAccess
-    .focus(isEmail)
-    .on('keyup', isEmail)
-    .on('keyup', formStateEvent);
-
-  $passwordAccess
-    .focus(isPassword)
-    .on('keyup', isPassword)
-    .on('keyup', formStateEvent);
-
-  $access
-    .on('click', redirectSight);
-    
-  formStateEvent();
-}
-  
-$(document).ready(begin);

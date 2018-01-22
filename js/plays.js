@@ -1,39 +1,89 @@
+/* Ocultamos los contenedores de cambio */
+var $changeName = $('#change-name');
+var $profileUpdate = $('#profile-update');
+
+$changeName.hide();
+$profileUpdate.hide();
+
 $(document).ready(function() {
+  var $imgUser = $('#image-user');
   var $name = $('#name-profile');
+  var $inputName = $('#input-new-name');
   var $inputPhrase = $('#input');
   var $containerPhrase = $('#container-phrase');
   var $spanPhrase = $('#span-phrase');
+  var $buttonIconPencilName = $('#button-icon-pencil-name');
+  var $buttonIconPencilPhrase = $('#button-icon-pencil-phrase');
   var $buttonIcon = $('#button-icon');
+  var $buttonIconName = $('#button-icon-name');
   var $buttonVideos = $('#button-videos');
   var $buttonImages = $('#button-images');
 
-  /* Agregamos el name con el que el usuario se registro */
-  var nameValidation = window.localStorage.getItem('name');
+  /* Obtención del usuario actual */
 
-  $name.text(nameValidation);
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var codeUser = user.uid;
+      var nameUser = user.displayName;
+      var photoUser = user.photoURL;
 
-  /* Este evento sirve para cambiar la frase al gusto de el */
-  $inputPhrase.on('keyup', function() {
-    event.preventDefault();
-    var phrase = $(this).val();
-    $containerPhrase.attr('data-phrase', phrase);
+      $imgUser.attr('src', photoUser);
+      $name.text(nameUser);
 
-    /* Guardamos la phrase en la base local */
+      firebase.database().ref('bd').child(codeUser)
+        .on('value', function(s) {
+          var updatingName = s.child('name').val();
+          if (updatingName) {
+            $name.text(updatingName);
+          }
 
-    localStorage.setItem('phrase', phrase);
+          var updatingPhrase = s.child('phrase').val();
+          if (updatingPhrase) {
+            $spanPhrase.text(updatingPhrase);
+          }
+        });
+
+      // Ocultamos el boton de cambio y mostramos el input
+      $buttonIconPencilName.on('click', function(event) {
+        $changeName.show();
+        $buttonIconPencilName.hide();
+      });
+
+      /* Con esta funcion actualizamos los cambios del nombre en firebase */
+      $buttonIconName.on('click', function(event) {
+        // validando que el input no este vacio ni con solo espacios
+        if ($inputName .val() && $inputName .val() !== 0) {
+          var newName = $inputName.val();
+          firebase.database().ref('bd').child(codeUser).child('name')
+            .set(newName);
+        }
+        $changeName.hide();
+        $buttonIconPencilName.show();
+        $inputName.val('');
+      });
+
+      $buttonIconPencilPhrase.on('click', function(event) {
+        $profileUpdate.show();
+        $buttonIconPencilPhrase.hide();
+      });
+
+      /* Con esta funcion actualizamos los cambios de la frase en firebase */
+      $buttonIcon.on('click', function(event) {
+        if ($inputPhrase.val() && $inputPhrase.val() !== 0) {
+          var newPhrase = $inputPhrase.val();
+          firebase.database().ref('bd').child(codeUser).child('phrase')
+            .set(newPhrase);
+        }
+        $profileUpdate.hide();
+        $buttonIconPencilPhrase.show();
+        $inputPhrase.val('');
+      });
+    } else {
+      // No user is signed in.
+    }
   });
 
-  $buttonIcon.on('click', function() {
-    var dataPhrase = $containerPhrase.attr('data-phrase');
-
-    $spanPhrase.text(dataPhrase);
-    $inputPhrase.val('');
-  });
-
-  /* Hacemos uso de la data title */
-  var phraseValidation = window.localStorage.getItem('phrase');
-
-  $spanPhrase.text(phraseValidation);
+  /* Este evento sirve para ir a las vista videos o images */
 
   $buttonVideos.on('click', function() {
     window.location.assign('videos.html');
@@ -44,7 +94,7 @@ $(document).ready(function() {
   });
 });
 
-// chat code
+/* Chat code */
 
 $(document).on('click', '.panel-heading span.icon_minim', function(e) {
   var $this = $(this);
