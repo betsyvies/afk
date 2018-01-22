@@ -111,7 +111,12 @@
   <br>
   <div class="container-fluid">
     <div class="row">
-      <img id="image-user" src="../assets/images/perfil.jpg" class="profile img-responsive img-rounded center-block" alt="A-C">
+      <form id="form-imagenes" class="photo-profile" action="">
+        <label class="btn btn-file">
+          <input type="file" name="file" value="" id="file" class="hidden">
+          <img id="image-user" src="../assets/images/perfil.jpg" class="profile img-responsive img-rounded center-block" alt="A-C">
+        </label>
+      </form>
       <h3>
         <span id="name-profile"></span>
         <button id="button-icon-pencil-name" class="btn btn-default" type="button">

@@ -104,6 +104,11 @@ hr {
   width: 18em;
 }
 
+.photo-profile {
+  display: flex;
+  justify-content: center;
+}
+
 h3 {
   text-align: center;
 }

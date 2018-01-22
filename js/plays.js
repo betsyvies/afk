@@ -7,6 +7,7 @@ $profileUpdate.hide();
 
 $(document).ready(function() {
   var $imgUser = $('#image-user');
+  var $inputFile = $('#file');
   var $name = $('#name-profile');
   var $inputName = $('#input-new-name');
   var $inputPhrase = $('#input');
@@ -36,6 +37,11 @@ $(document).ready(function() {
           if (updatingName) {
             $name.text(updatingName);
           }
+
+          // var updatingPhoto = s.child('photo').val();
+          // if (updatingPhoto) {
+          //   $imgUser.text(updatingPhoto);
+          // }
 
           var updatingPhrase = s.child('phrase').val();
           if (updatingPhrase) {
@@ -78,6 +84,43 @@ $(document).ready(function() {
         $buttonIconPencilPhrase.show();
         $inputPhrase.val('');
       });
+
+      /* Cambiaremos la foto de perfil del usuario */
+      var storageRef = firebase.storage().ref();
+      showProfileImage();
+
+      $inputFile.on('change', function(event) {
+        var profilePhotoToUpload = $(this).prop('files')[0];
+        var uploadTask = storageRef.child('images/' + profilePhotoToUpload.name).put(profilePhotoToUpload);
+        uploadTask.on('state_changed', function(s) {
+          // mostrar barra de progreso
+        },
+        function(error) {
+          alert('Hubo un error al subir la imagen');
+        },
+        function() {
+          var downloadURL = uploadTask.snapshot.downloadURL;;
+          createImageFirebaseNode(profilePhotoToUpload.name, downloadURL);
+        });
+      });
+
+      function createImageFirebaseNode(photoName, url) {
+        firebase.database().ref('bd').child(codeUser).child('photo')
+          .child('urlImage').set(url)
+          .child('nameImage').set(photoName);
+      }
+
+      function showProfileImage() {
+        firebase.database().ref('bd').child(codeUser).child('photo').child('urlImage')
+          .on('value', function(s) {
+          // esto devuelve un array por eso se puede recorrer
+            var myPhoto = s.val();
+            if (myPhoto !== null) {
+              $imgUser.attr('src', myPhoto);  
+            }
+          });
+      }
+      
     } else {
       // No user is signed in.
     }
