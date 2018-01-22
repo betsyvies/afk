@@ -38,11 +38,6 @@ $(document).ready(function() {
             $name.text(updatingName);
           }
 
-          // var updatingPhoto = s.child('photo').val();
-          // if (updatingPhoto) {
-          //   $imgUser.text(updatingPhoto);
-          // }
-
           var updatingPhrase = s.child('phrase').val();
           if (updatingPhrase) {
             $spanPhrase.text(updatingPhrase);
@@ -120,7 +115,7 @@ $(document).ready(function() {
             }
           });
       }
-      
+
     } else {
       // No user is signed in.
     }

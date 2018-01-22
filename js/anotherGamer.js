@@ -6,7 +6,7 @@ $(document).ready(function() {
       firebase.database().ref('bd').child(anotherGamerCode)
         .on('value', function(s) {
           var nameAnotherGamer = s.child('name').val();
-          var photoAnotherGamer = s.child('photo').val();
+          var photoAnotherGamer = s.child('photo').child('urlImage').val();
           var phraseAnotherGamer  = s.child('phrase').val();
 
           /* Añadiendo información de los gamers */
