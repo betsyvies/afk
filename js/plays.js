@@ -10,6 +10,8 @@ $(document).ready(function() {
   var $inputFile = $('#file');
   var $inputFileImages = $('#file-1');
   var $containerImgPost = $('#container-images-post');
+  var $inputFileVideos = $('#file-2');
+  var $containerVideosPost = $('#container-videos-post');
   var $name = $('#name-profile');
   var $inputName = $('#input-new-name');
   var $inputPhrase = $('#input');
@@ -120,9 +122,24 @@ $(document).ready(function() {
 
       showProfileImagePost();
 
+      function showProfileImagePost() {
+        firebase.database().ref('bd').child(codeUser).child('imgPost')
+          .on('value', function(s) {
+            var data = s.val();
+            $containerImgPost.html('');
+            for (var key in data) {
+              $containerImgPost.append(`
+              <div class="container-img col-sm-4 col-lg-4">
+              <h4 class="title-img">Rediseño reciente de Kassadin</h4>
+              <img class="profile img-responsive" src='${data[key].url}' alt="jugada"/>
+              </div>`);
+            }
+          });
+      }
+
       /* Con esta funcion subiremos imagenes a storage de firebase */
       $inputFileImages.on('change', function() {
-        var imageUpload = $('this').prop('files')[0];
+        var imageUpload = $(this).prop('files')[0];
 
         var uploadTask = storageRef.child('imagesPost/' + imageUpload.name).put(imageUpload);
         uploadTask.on('state_changed', 
@@ -139,23 +156,55 @@ $(document).ready(function() {
           });
       });
       
-      function createImagePostFirebaseNode(nameImage, url) {
+      function createImagePostFirebaseNode(nameImgPost, url) {
         firebase.database().ref('bd').child(codeUser).child('imgPost').push({
           name: nameImgPost,
           url: url
         });
       }
 
-      function showProfileImagePost() {
-        firebase.database().ref('bd').child(codeUser).child('imgPost')
+      
+      showProfileVideosPost();
+
+      function showProfileVideosPost() {
+        firebase.database().ref('bd').child(codeUser).child('videoPost')
           .on('value', function(s) {
             var data = s.val();
-            var result = '';
+            $containerVideosPost.html('');
             for (var key in data) {
-              result = '<img class="profile img-responsive img-circle center-block" src=\'' + data[key].url + '\' />';
+              $containerVideosPost.append(`
+              <div class="container-video col-sm-4 col-lg-4">
+              <h4 class="title-video">League of Legends</h4>
+              <iframe class="video" src='${data[key].url}' frameborder="0" gesture="media" allow="encrypted-media"
+                allowfullscreen></iframe>`);
             }
-            $containerImgPost.append(result);
           });
+      }
+
+      /* Con esta funcion subiremos videos a storage de firebase */
+      $inputFileVideos.on('change', function() {
+        var videoUpload = $(this).prop('files')[0];
+
+        var uploadTask = storageRef.child('videoPost/' + videoUpload .name).put(videoUpload);
+        uploadTask.on('state_changed', 
+          function(s) {
+          // mostrar barra de progreso
+          },
+          function(error) {
+            alert('Hubo un error al subir el video');
+          },
+          function() {
+            // Se mostrará cuando se ha subido exitosamente la imagen
+            var downloadURL = uploadTask.snapshot.downloadURL;
+            createVideoPostFirebaseNode(videoUpload.name, downloadURL);
+          });
+      });
+      
+      function createVideoPostFirebaseNode(nameVideoPost, url) {
+        firebase.database().ref('bd').child(codeUser).child('videoPost').push({
+          name: nameVideoPost,
+          url: url
+        });
       }
     } else {
       // No user is signed in.

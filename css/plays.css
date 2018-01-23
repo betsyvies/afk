@@ -97,6 +97,7 @@ hr {
 /*Estilos Imagen - videos*/
 
 .profile {
+  display: inline-block;
   height: 18em;
   width: 18em;
 }
