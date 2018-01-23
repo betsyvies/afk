@@ -8,6 +8,8 @@ $profileUpdate.hide();
 $(document).ready(function() {
   var $imgUser = $('#image-user');
   var $inputFile = $('#file');
+  var $inputFileImages = $('#file-1');
+  var $containerImgPost = $('#container-images-post');
   var $name = $('#name-profile');
   var $inputName = $('#input-new-name');
   var $inputPhrase = $('#input');
@@ -116,6 +118,45 @@ $(document).ready(function() {
           });
       }
 
+      showProfileImagePost();
+
+      /* Con esta funcion subiremos imagenes a storage de firebase */
+      $inputFileImages.on('change', function() {
+        var imageUpload = $('this').prop('files')[0];
+
+        var uploadTask = storageRef.child('imagesPost/' + imageUpload.name).put(imageUpload);
+        uploadTask.on('state_changed', 
+          function(s) {
+          // mostrar barra de progreso
+          },
+          function(error) {
+            alert('Hubo un error al subir la imagen');
+          },
+          function() {
+            // Se mostrará cuando se ha subido exitosamente la imagen
+            var downloadURL = uploadTask.snapshot.downloadURL;
+            createImagePostFirebaseNode(imageUpload.name, downloadURL);
+          });
+      });
+      
+      function createImagePostFirebaseNode(nameImage, url) {
+        firebase.database().ref('bd').child(codeUser).child('imgPost').push({
+          name: nameImgPost,
+          url: url
+        });
+      }
+
+      function showProfileImagePost() {
+        firebase.database().ref('bd').child(codeUser).child('imgPost')
+          .on('value', function(s) {
+            var data = s.val();
+            var result = '';
+            for (var key in data) {
+              result = '<img class="profile img-responsive img-circle center-block" src=\'' + data[key].url + '\' />';
+            }
+            $containerImgPost.append(result);
+          });
+      }
     } else {
       // No user is signed in.
     }

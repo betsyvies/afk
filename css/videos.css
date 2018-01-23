@@ -95,6 +95,9 @@ hr {
 }
 
 .container-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   margin-top: 2rem;
 }
@@ -111,7 +114,7 @@ hr {
 
 .container-video {
   margin-bottom: 2rem;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 .video {
@@ -119,41 +122,44 @@ hr {
   height: 20rem; 
 }
 
-/* Modal for images*/
+/* Styles for file input */
 
-.center {
-  display: flex;
- justify-content: center;
-}
-	
-.file-input {
-  visibility: hidden;
-  width: 0;
-  position: relative;
-}
-
-.file-input::before {
-  content: '\f0ee';
-  display: inline-block;
-  background: -webkit-linear-gradient(top, #173430, #000);
-  border: 1px solid #000;
-  border-radius: 3px;
-  padding: 5px 170px;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
-  font-family: FontAwesome;
-  visibility: visible;
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
   position: absolute;
+  z-index: -1;
 }
 
-.file-input:hover::before {
-  border-color: #000;
+.inputfile + label {
+  background-color: #173430;
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
 }
 
-.file-input:active::before {
-  background: -webkit-linear-gradient(top, #173430, #000);
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.iborrainputfile {
+  color: #fff;
+  font-size:16px; 
+  font-weight:normal;
+  font-family: 'Lato';
 }
 
 /* Modal styles */
