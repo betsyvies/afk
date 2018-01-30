@@ -114,19 +114,24 @@ h2 {
   cursor: pointer;
 }
 
-@media (min-width:768px) {
+.user-name {
+  text-align: center;
+  color: #000;
+}
+
+/* @media (min-width:768px) {
   .user-name {
     display: flex;
-    justify-content: left;;
+    justify-content: left;
     align-items: left;
     color: #000;
   }
-}
+} */
 
 @media (min-width:992px) {
   .user-name {
     display: flex;
-    justify-content: left;;
+    justify-content: left;
     align-items: left;
     color: #000;
   }

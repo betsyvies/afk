@@ -1,45 +1,52 @@
 $(document).ready(function() {
   $buttonGame = $('#button-game');
   $containerComment = $('#container-comment');
+  $comment = $('#comment');
 
-  $buttonGame.on('click', function() {
-    $containerComment = $('#container-comment');
-    $comment = $('#comment');
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var codeUser = user.uid;
 
-    var publication = $comment.val();
-    var hour = moment().format('LT');
+      $buttonGame.on('click', function(event) {
+        if ($comment.val() && $comment.val() !== 0) {
+          var publication = $comment.val();
+          var hour = moment().format('LT');
 
-    /* Guardamos la publicación y la hora en la base local */
-    localStorage.setItem('publication', publication);
-    localStorage.setItem('hour', hour);
+          firebase.database().ref('bd').child(codeUser).child('publication').push({
+            publication: publication,
+            hour: hour
+          });
+        }
+      });
+      
+      showPublication();
 
-    $containerComment.append('<div class="col-xs-12 container-user2">' +
-      '<div id="container-icon-user" class="col-xs-3 container-user">' +
-      '<i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>' +
-      '</div>' +
-      '<div id="container-publication" class="col-xs-9 container-user">' +
-      '<p id="publication-day" class="text">' + publication + '</p>' +
-      '<p class="text">' + hour + '</p>' + '<p class="text">' + name + '</p>' +
-      '</div>' +
-      '</div>');
+      function showPublication() {
+        firebase.database().ref('bd').child(codeUser)
+          .on('value', function(s) {
+            var nameUser = s.child('name').val();
+            var photoUser = s.child('photo').child('urlImage').val();
+            var data = s.child('publication').val();
 
-    $comment.val('');
+            $containerComment.html('');
+            for (var key in data) {
+              $containerComment.append(`<div class="col-xs-12 container-user2 container-game">
+              <div id="container-icon-user" class="col-xs-3 col-md-1 col-sm-3 col-lg-1 container-user container-game">
+              <img class="profile img-responsive img-circle user-icon" src='${photoUser}'>
+              </div>
+              <div id="container-publication" class="col-xs-11 container-user">
+              <p class="text name">${nameUser}</p>
+              <p id="publication-day" class="text publication">${data[key].publication}</p>
+              <p class="text hour">${data[key].hour}</p>
+              </div>
+              </div>`);
+            }
+          });
+      }
+    } else {
+      // No user is signed in.
+    }
   });
-  /* Hacemos uso de la data, para publicar */
-  var publicationValidation = window.localStorage.getItem('publication');
-  var hourValidation = window.localStorage.getItem('hour');
-  
-  var nameValidation = window.localStorage.getItem('name');
-
-  $containerComment.append('<div class="col-xs-12 container-user2">' +
-      '<div id="container-icon-user" class="col-xs-3 container-user">' +
-      '<i class="fa fa-user-circle-o user-icon" aria-hidden="true"></i>' +
-      '</div>' +
-      '<div id="container-publication" class="col-xs-9 container-user">' +
-      '<p id="publication-day" class="text">' + publicationValidation + '</p>' +
-      '<p class="text">' + hourValidation + '</p>' + '<p class="text">' + nameValidation + '</p>' +
-      '</div>' +
-      '</div>');
 });
 
 // chat code
@@ -105,9 +112,7 @@ function send() {
   $('#messagebody').animate({ scrollTop: $('#messagebody')[0].scrollHeight }, 'slow');
 }
 
-
 // send function end
-
 
 $('#btn-chat').click(function() {
   send();

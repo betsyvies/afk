@@ -1,47 +1,55 @@
-function previewFile() {
-  var preview = document.querySelector('img');
-  var file = document.querySelector('input[type=file]').files[0];
-  var reader = new FileReader();
-
-  reader.onloadend = function() {
-    var attrSrc = reader.result;
-    preview.src = attrSrc;
-    console.log(reader.result);
-
-    /* Guardamos el resultado  en la base local */
-    localStorage.setItem('attrSrc', attrSrc);
-  };
-
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-    preview.src = '';
-  }
-}
-
 $(document).ready(function() {
-  $image = $('#image');
-  $buttonImage = $('#button-icon-image');
-  $titleImageView = $('#title-image-view');
+  $inputFileImages = $('#file-1');
+  $containerImgPost = $('#container-images-post');
 
-  /* Hacemos uso de la data attrSrc, para guardar la imagen  */
-  var attrSrcValidation = window.localStorage.getItem('attrSrc');
-  $image.attr('src', attrSrcValidation);
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var codeUser = user.uid;
+      
+      showProfileImagePost();
 
-  $buttonImage.on('click', function() {
-    $inputImage = $('#input-title-image');
-    $titleImageView = $('#title-image-view');
+      function showProfileImagePost() {
+        firebase.database().ref('bd').child(codeUser).child('imgPost')
+          .on('value', function(s) {
+            var data = s.val();
+            $containerImgPost.html('');
+            for (var key in data) {
+              $containerImgPost.append(`
+              <div class="container-img col-sm-4 col-lg-4">
+              <h4 class="title-img">Rediseño reciente de Kassadin</h4>
+              <img class="profile img-responsive" src='${data[key].url}' alt="jugada"/>
+              </div>`);
+            }
+          });
+      }
 
-    var title = $inputImage.val();
+      /* Con esta funcion subiremos imagenes a storage de firebase */
+      $inputFileImages.on('change', function() {
+        var imageUpload = $(this).prop('files')[0];
 
-    $titleImageView.text(title);
-  
-    /* Guardamos el title en la base local */
-    localStorage.setItem('title', title);
+        var uploadTask = storageRef.child('imagesPost/' + imageUpload.name).put(imageUpload);
+        uploadTask.on('state_changed', 
+          function(s) {
+          // mostrar barra de progreso
+          },
+          function(error) {
+            alert('Hubo un error al subir la imagen');
+          },
+          function() {
+            // Se mostrará cuando se ha subido exitosamente la imagen
+            var downloadURL = uploadTask.snapshot.downloadURL;
+            createImagePostFirebaseNode(imageUpload.name, downloadURL);
+          });
+      });
+      
+      function createImagePostFirebaseNode(nameImgPost, url) {
+        firebase.database().ref('bd').child(codeUser).child('imgPost').push({
+          name: nameImgPost,
+          url: url
+        });
+      }
+    } else {
+      // No user is signed in.
+    }
   });
-
-  /* Hacemos uso de la data title */
-  var titleValidation = window.localStorage.getItem('title');
-
-  $titleImageView.text(titleValidation);
 });
