@@ -32,6 +32,10 @@ body {
   align-items: center;
 }
 
+.button {
+  margin-left: 2rem;
+}
+
 .container-game {
   display: flex;
   justify-content: center;
@@ -165,7 +169,7 @@ hr {
 /* Modal styles */
 
 .font-color {
-  color:#465945;;
+  color:#465945;
 }
 
 .color {

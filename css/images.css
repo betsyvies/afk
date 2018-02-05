@@ -32,6 +32,10 @@ body {
   align-items: center;
 }
 
+.button {
+  margin-left: 2rem;
+}
+
 .container-game {
   display: flex;
   justify-content: center;

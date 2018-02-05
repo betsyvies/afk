@@ -68,16 +68,14 @@
       <div class="row">
         <div class="col-xs-12  container-header">
           <div class="col-xs-2 container-icon">
-            <a href="#">
-              <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true" data-toggle="modal" data-target="#modalDay"></span>
-            </a>
+            <form id="form-imagenes" class="photo-profile" action="">
+              <label class="btn btn-file">
+                <input type="file" name="file" value="" id="file" class="hidden">
+                <span class="glyphicon glyphicon-plus-sign plus" aria-hidden="true"></span>
+              </label>
+            </form>
           </div>
           <div class="col-xs-10 container-game">
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
-            <div class="circle center-block col-xs-2 col-md-2"></div>
           </div>
         </div>
       </div>
@@ -307,81 +305,11 @@
               </div>
             </div>
             <div id="messagebody" class="panel-body msg_container_base">
-              <div class="row msg_container base_sent">
-                <div class="col-md-10 col-xs-10">
-                  <div class="messages msg_sent">
-                    <p>Hola!</p>
-                    <time datetime="2009-11-13T20:00">Gamer 1. • Yesterday 10:05:22</time>
-                  </div>
-                </div>
-                <div class="col-md-2 col-xs-2 avatar">
-                  <img src="../assets/images/perfil.jpg" class="chatimg img-responsive ">
-                </div>
-              </div>
-              <div class="row msg_container base_receive">
-                <div class="col-md-2 col-xs-2 avatar">
-                  <img src="../assets/images/chat-img.jpg" class="chatimg img-responsive ">
-                </div>
-                <div class="col-md-10 col-xs-10">
-                  <div class="messages msg_receive">
-                    <p>Hola Komrad!</p>
-                    <time datetime="2009-11-13T20:00">Gamer 2 • Yesterday 10:05:28</time>
-                  </div>
-                </div>
-              </div>
-              <div class="row msg_container base_receive">
-                <div class="col-md-2 col-xs-2 avatar">
-                  <img src="../assets/images/chat-img.jpg" class="chatimg img-responsive ">
-                </div>
-                <div class="col-xs-10 col-md-10">
-                  <div class="messages msg_receive">
-                    <p>¿Como estás?</p>
-                    <time datetime="2009-11-13T20:00">Gamer 2 • Yesterday 10:05:33</time>
-                  </div>
-                </div>
-              </div>
-              <div class="row msg_container base_sent">
-                <div class="col-xs-10 col-md-10">
-                  <div class="messages msg_sent">
-                    <p>Bien amigo! ¿Cuando nos conectamos con el equipo?</p>
-                    <time datetime="2009-11-13T20:00">Gamer 1. • Yesterday 10:05:38</time>
-                  </div>
-                </div>
-                <div class="col-md-2 col-xs-2 avatar">
-                  <img src="../assets/images/perfil.jpg" class="chatimg img-responsive ">
-                </div>
-              </div>
-              <div class="row msg_container base_receive">
-                <div class="col-md-2 col-xs-2 avatar">
-                  <img src="../assets/images/chat-img.jpg" class="chatimg img-responsive ">
-                </div>
-                <div class="col-xs-10 col-md-10">
-                  <div class="messages msg_receive">
-                    <p>Mañana tengo tiempo en la noche!</p>
-                    <time datetime="2009-11-13T20:00"> Gamer 2 • Yesterday 10:05:41</time>
-                  </div>
-                </div>
-              </div>
-              <div class="row msg_container base_sent">
-                <div class="col-md-10 col-xs-10 ">
-                  <div class="messages msg_sent">
-                    <p>que bueno, ahí es donde nos vamos a conectar con el equipo! ¿ a que hora te parece?</p>
-                    <time datetime="2009-11-13T20:00">Gamer 1. • Yesterday 10:05:45</time>
-                  </div>
-                </div>
-                <div class="col-md-2 col-xs-2 avatar">
-                  <img src="../assets/images/perfil.jpg" class="chatimg img-responsive ">
-                </div>
-              </div>
-
-
             </div>
-
           </div>
           <div class="panel-footer">
             <div class="input-group">
-              <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Equipen sus mensajes..." required="required"
-              />
+              <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Equipen sus mensajes..." required="required"/>
               <span class="input-group-btn">
                 <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
               </span>
@@ -389,39 +317,13 @@
           </div>
         </div>
       </div>
-
-
-      <div class="btn-group dropup">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          <span class="glyphicon glyphicon-cog"></span>
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li>
-            <a href="#" id="new_chat">
-              <span class="glyphicon glyphicon-plus"></span> Novo</a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-list"></span> Ver outras</a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-remove"></span> Fechar Tudo</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-eye-close"></span> Invisivel</a>
-          </li>
-        </ul>
-      </div>
     </div>
     <!-- Import jQuery and Bootstrap.js -->
     <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script type="text/javascript" src="../js/initial-firebase.js"></script>
     <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/chat.js"></script>
     <script type="text/javascript" src="../js/plays.js"></script>
 </body>
 

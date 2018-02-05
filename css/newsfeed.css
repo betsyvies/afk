@@ -32,6 +32,10 @@ body {
   align-items: center;
 }
 
+.button {
+  margin-left: 2rem;
+}
+
 .container-game {
   display: flex;
   justify-content: center;
@@ -91,6 +95,15 @@ hr {
 h2 {
   font-family: 'Press Start 2P', cursive;
   color: #013220!important;
+}
+
+.button-game-style {
+  cursor: pointer;
+}
+
+.button-game-style:active {
+  background: #465945;
+  color: #fff;
 }
 
 /* Styles for Container notifications */
