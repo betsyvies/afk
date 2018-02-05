@@ -57,7 +57,7 @@ $(document).ready(function() {
       /* Con esta funcion actualizamos los cambios del nombre en firebase */
       $buttonIconName.on('click', function(event) {
         // validando que el input no este vacio ni con solo espacios
-        if ($inputName .val() && $inputName .val() !== 0) {
+        if ($inputName.val() && $inputName.val() !== 0) {
           var newName = $inputName.val();
           firebase.database().ref('bd').child(codeUser).child('name')
             .set(newName);
@@ -162,7 +162,6 @@ $(document).ready(function() {
           url: url
         });
       }
-
       
       showProfileVideosPost();
 
@@ -174,18 +173,70 @@ $(document).ready(function() {
             for (var key in data) {
               $containerVideosPost.prepend(`
               <div class="container-video col-sm-4 col-lg-4">
-              <h4 class="title-video">League of Legends</h4>
-              <iframe class="video" src='${data[key].url}' frameborder="0" gesture="media" allow="encrypted-media"
-                allowfullscreen></iframe>`);
+              <h3>
+              <span id="name-image">Imagen</span>
+              <button id="button-icon-name-videos" class="btn btn-default" type="button">
+                <i class="fa fa-pencil icon-pencil" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <!-- Change Name -->
+            <div id="change-name-videos" class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 container-info-user">
+                  <form class="col-xs-12 col-sm-9">
+                    <div class="input-group">
+                      <input id="input-name-videos"  type="text" class="form-control" placeholder="¿Tienes un mejor nombre?">
+                      <span class="input-group-btn">
+                        <button id="button-name-videos" data-key = '${key}' class="btn btn-default" type="button">
+                          <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>  
+            </div>
+              <iframe class="video" src='${data[key].url}' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>`);
             }
           });
       }
+
+      $('#container-videos-post #change-name-videos').hide();
+
+      /* Funciones para cambiar el nombre de los videos */
+      $containerVideosPost.on('click', '#button-icon-name-videos', function(event) {
+        $('#change-name-videos').show();
+        $('#button-icon-name-videos').hide();
+      });
+
+      $containerVideosPost.on('click', '#button-name-videos', function() {
+        var codeVideo = $('#button-name-videos').data('key');
+        $inputNameVideos = $('#input-name-videos');
+
+        // validando que el input no este vacio ni con solo espacios
+        if ($inputNameVideos.val() && $inputNameVideos.val() !== 0) {
+          var newNameVideo = $inputNameVideos.val();
+          firebase.database().ref('bd').child(codeUser).child('videoPost').child(codeVideo).child('name')
+            .set(newNameVideo);
+
+          firebase.database().ref('bd').child(codeUser)
+            .on('value', function(s) {
+              var updatingNameVideo = s.child('videoPost').child(codeVideo).child('name').val();
+              if (updatingNameVideo) {
+                $('#name-image').text(updatingNameVideo);
+              }
+            });
+        }
+        $('#change-name-videos').hide();
+        $('#button-icon-name-videos').show();
+        $inputNameVideos.val('');
+      });
 
       /* Con esta funcion subiremos videos a storage de firebase */
       $inputFileVideos.on('change', function() {
         var videoUpload = $(this).prop('files')[0];
 
-        var uploadTask = storageRef.child('videoPost/' + videoUpload .name).put(videoUpload);
+        var uploadTask = storageRef.child('videoPost/' + videoUpload.name).put(videoUpload);
         uploadTask.on('state_changed', 
           function(s) {
           // mostrar barra de progreso
