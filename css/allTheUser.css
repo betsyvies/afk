@@ -38,8 +38,14 @@ body {
 
 .container-game {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.image {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 2px solid #fff;
+  margin-right: 1rem;
 }
 
 h4 {

@@ -14,8 +14,7 @@ $(document).ready(function() {
             var data = s.val();
             $containerImgDay.html('');
             for (var key in data) {
-              $containerImgDay.prepend(`
-              <img class="profile img-responsive img-circle image" src="${data[key].url}" alt="">`);
+              $containerImgDay.prepend(`<img class="img-responsive img-circle image" src="${data[key].url}" alt="">`);
             }
           });
       }
@@ -24,7 +23,7 @@ $(document).ready(function() {
       $inputFileImagesDay.on('change', function() {
         var imageUpload = $(this).prop('files')[0];
 
-        var uploadDay = storageRef.child('imagesDay/' + imageUpload.name).put(imageUpload);
+        var uploadDay = firebase.storage().ref().child('imagesDay/' + imageUpload.name).put(imageUpload);
         uploadDay.on('state_changed', 
           function(s) {
           // mostrar barra de progreso
@@ -34,7 +33,7 @@ $(document).ready(function() {
           },
           function() {
             // Se mostrará cuando se ha subido exitosamente la imagen
-            var downloadURL = uploadTask.snapshot.downloadURL;
+            var downloadURL = uploadDay.snapshot.downloadURL;
             createImagePostFirebaseNode(imageUpload.name, downloadURL);
           });
       });
