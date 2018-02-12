@@ -13,7 +13,6 @@ $(document).ready(function() {
             /* Para vista desktop */
             $containerImgPost.append(`
             <div class="container-img col-sm-4 col-lg-4">
-            <h4 class="title-img">Rediseño reciente de Kassadin</h4>
             <img class="profile img-responsive" src='${imagePostAnotherGamer[key].url}' alt="jugada"/>
             </div>`);
           }

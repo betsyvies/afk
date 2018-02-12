@@ -15,7 +15,6 @@ $(document).ready(function() {
             /* Para vista desktop */
             $containerVideosPost.append(`
             <div class="container-video col-sm-4 col-lg-4">
-            <h4 class="title-video">League of Legends</h4>
             <iframe class="video" src='${videoPostAnotherGamer[key].url}' frameborder="0" gesture="media" allow="encrypted-media"
               allowfullscreen></iframe>`);
           }

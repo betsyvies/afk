@@ -16,7 +16,6 @@ $(document).ready(function() {
             for (var key in data) {
               $containerImgPost.append(`
               <div class="container-img col-sm-4 col-lg-4">
-              <h4 class="title-img">Rediseño reciente de Kassadin</h4>
               <img class="profile img-responsive" src='${data[key].url}' alt="jugada"/>
               </div>`);
             }
@@ -27,7 +26,7 @@ $(document).ready(function() {
       $inputFileImages.on('change', function() {
         var imageUpload = $(this).prop('files')[0];
 
-        var uploadTask = storageRef.child('imagesPost/' + imageUpload.name).put(imageUpload);
+        var uploadTask = firebase.storage().ref().child('imagesPost/' + imageUpload.name).put(imageUpload);
         uploadTask.on('state_changed', 
           function(s) {
           // mostrar barra de progreso

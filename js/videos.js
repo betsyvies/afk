@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $inputFileVideos = $('#file-1');
+  $inputFileVideos = $('#file-2');
   $containerVideosPost = $('#container-videos-post');
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -16,7 +16,6 @@ $(document).ready(function() {
             for (var key in data) {
               $containerVideosPost.append(`
           <div class="container-video col-sm-4 col-lg-4">
-          <h4 class="title-video">League of Legends</h4>
           <iframe class="video" src='${data[key].url}' frameborder="0" gesture="media" allow="encrypted-media"
             allowfullscreen></iframe>`);
             }
@@ -27,7 +26,7 @@ $(document).ready(function() {
       $inputFileVideos.on('change', function() {
         var videoUpload = $(this).prop('files')[0];
 
-        var uploadTask = storageRef.child('videoPost/' + videoUpload .name).put(videoUpload);
+        var uploadTask = firebase.storage().ref().child('videoPost/' + videoUpload.name).put(videoUpload);
         uploadTask.on('state_changed', 
           function(s) {
             // mostrar barra de progreso
