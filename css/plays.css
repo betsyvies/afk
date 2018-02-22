@@ -11,6 +11,20 @@ body {
 
 /* Styles for header */
 
+.nav-header {
+  margin-top: 10px;
+}
+
+.container-list {
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  font-weight: 700;
+}
+
 .container-header {
   height: 8rem;
   display: flex;
@@ -23,7 +37,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-  
+
 .color-grey-white {
   margin-top: 15px;
   margin-left: 15px;

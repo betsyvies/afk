@@ -160,37 +160,38 @@ $(document).ready(function() {
         });
       }
       
-      showProfileVideosPost();
+      showProfileVideoPost();
 
-      function showProfileVideosPost() {
+      function showProfileVideoPost() {
         firebase.database().ref('bd').child(codeUser).child('videoPost')
           .on('value', function(s) {
             var data = s.val();
             $containerVideosPost.html('');
             for (var key in data) {
               $containerVideosPost.prepend(`
-              <div class="container-video col-sm-4 col-lg-4">
+              <div class="container-img col-sm-4 col-lg-4">
               <iframe class="video" src='${data[key].url}' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
               </div>`);
             }
           });
       }
 
-      /* Con esta funcion subiremos videos a storage de firebase */
+      /* Con esta funcion subiremos imagenes a storage de firebase */
       $inputFileVideos.on('change', function() {
         var videoUpload = $(this).prop('files')[0];
 
         var uploadTask = firebase.storage().ref().child('videoPost/' + videoUpload.name).put(videoUpload);
         uploadTask.on('state_changed', 
           function(s) {
-          // mostrar barra de progreso
+            // var porcentage = (s.bytesTransferred/ s.totalBytes) * 100;
+            // uploader.value = porcentage;
           },
           function(error) {
-            alert('Hubo un error al subir el video');
+            alert('Hubo un error al subir la imagen');
           },
           function() {
             // Se mostrará cuando se ha subido exitosamente la imagen
-            var downloadURL = uploadTask.s.downloadURL;
+            var downloadURL = uploadTask.snapshot.downloadURL;
             createVideoPostFirebaseNode(videoUpload.name, downloadURL);
           });
       });

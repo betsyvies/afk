@@ -9,8 +9,22 @@
 body { 
   padding-top: 270px; 
 }
-       
+
 /* Styles for header */
+
+.nav-header {
+  margin-top: 10px;
+}
+
+.container-list {
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  font-weight: 700;
+}
 
 .container-header {
   height: 8rem;

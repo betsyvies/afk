@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--Import Bootstrap.css-->
   <link type="text/css" rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="../assets/images/gu.png">
   <link type="text/css" rel="stylesheet" href="../css/start.css">
 </head>
 
@@ -20,17 +21,21 @@
   <div class="container-fluid background">
     <div class="row">
       <div class="col-xs-12 col-lg-12 container-img">
-        <h1>Always for komrads</h1>
+        <h1 class="title">Always for komrads</h1>
       </div>
       <div class="col-xs-12 col-lg-12 container-button">
         <div class="col-xs-12">
-          <a id="log-in" class="btn btn-default button" href="../views/login.html" role="button">LOG IN</a>
+          <button id="log-in" class="btn btn-default button" role="button">
+            <i class="fa fa-google-plus icon"></i>Log in with google
+          </button>
         </div>
       </div>
     </div>
   </div>
   <!-- Import jQuery and Bootstrap.js -->
   <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script type="text/javascript" src="../js/initial-firebase.js"></script>
   <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/start.js"></script>
 </body>

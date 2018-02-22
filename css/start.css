@@ -12,7 +12,7 @@
 /* Styles for main view */
 
 .background {
-  background-image: url("../assets/images/jugando.jpg");
+  background-image: url("../assets/images/jugando.jpeg");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-position: center center;
@@ -21,16 +21,33 @@
   align-items: center;
   height: 100vh;
 }
+
+.title {
+  color: #ffff00;
+}
   
 .container-button {
-  top: 18rem;
+  top: 15rem;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-right: 1rem;
 }
 
 .button {
-  background-color: transparent;
-  border-color: #fff;
+  background-color: #ea4335;
+  border-color: #ea4335;
   color: #fff;
   padding: 1rem 2rem;
 }
+
+.button:active, .button:hover {
+  background-color: #ea4335;
+  border-color: #ea4335;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
 
   
